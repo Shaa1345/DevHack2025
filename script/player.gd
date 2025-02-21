@@ -1,3 +1,5 @@
+
+#note: assign keys in input keys section
 extends CharacterBody2D
 
 var speed = 100
