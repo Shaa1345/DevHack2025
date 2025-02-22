@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/HEROICCC.mp3-385962c98df66f029b4b306cf71c54ef
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

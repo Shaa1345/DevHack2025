@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=24 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
 [ext_resource type="Texture2D" uid="uid://na1r5rhaf8ua" path="res://art/desktop_background.jpg" id="2_7m54x"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" path="res://scene/colour_2d.gd" id="14_vr5i2"]
 [ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
 [ext_resource type="Texture2D" uid="uid://vtpykj6pk5iy" path="res://art/colour.png" id="15_g6uri"]
+[ext_resource type="AudioStream" uid="uid://x8udsscqdgqk" path="res://music/HEROICCC.mp3" id="19_2spe2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
 radius = 13.8924
@@ -146,3 +147,7 @@ offset_bottom = 3487.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 100
 text = "You Win!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_2spe2")
+autoplay = true
