@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://maze_game_close.gd" id="1_gpmhd"]
 [ext_resource type="Texture2D" uid="uid://wkfsk67r638e" path="res://images/application_window.png" id="2_lsedb"]
-[ext_resource type="PackedScene" uid="uid://kxvb14g2sgps" path="res://scene/colour_app.tscn" id="3_wlbd5"]
+[ext_resource type="PackedScene" uid="uid://qnk8fe3viix6" path="res://scene/colour_app.tscn" id="3_wlbd5"]
 [ext_resource type="Texture2D" uid="uid://qc1er3e3uden" path="res://images/close_button.png" id="4_0cruk"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="5_esanw"]
 
@@ -45,8 +45,8 @@ layout_mode = 2
 theme_override_constants/margin_bottom = 26
 
 [node name="ColourApp" parent="ColourGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("3_wlbd5")]
-position = Vector2(16, 100)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-2, 31)
+scale = Vector2(0.4, 0.4)
 
 [node name="Sprite2D" type="Sprite2D" parent="ColourGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
 position = Vector2(485.5, 12)
