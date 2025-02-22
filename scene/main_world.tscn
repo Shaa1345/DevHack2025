@@ -105,5 +105,10 @@ script = ExtResource("15_0qigl")
 shape = SubResource("RectangleShape2D_haoxv")
 
 [node name="Label" type="Label" parent="TileGame"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 180.0
+offset_top = 3350.0
+offset_right = 603.0
+offset_bottom = 3487.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "You Win!"
