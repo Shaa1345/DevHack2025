@@ -30,19 +30,20 @@ scale = Vector2(0.240723, 0.240723)
 clip_children = 2
 z_index = 2
 position = Vector2(-8.30832, 70.6207)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
 [node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_tl"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0337425
-anchor_top = -0.0735344
-anchor_right = 0.0639138
-anchor_bottom = 0.0377937
-offset_left = 171.276
-offset_top = -153.35
-offset_right = 225.276
-offset_bottom = -110.35
+anchor_left = -0.0675211
+anchor_top = -0.107245
+anchor_right = 0.126229
+anchor_bottom = 0.0819595
+offset_left = 652.837
+offset_top = -444.249
+offset_right = 706.837
+offset_bottom = -401.249
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -55,19 +56,20 @@ metadata/_edit_use_anchors_ = true
 [node name="horizontal_tc" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
 position = Vector2(706.207, -20.7708)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
 [node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_tc"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0669216
-anchor_top = -0.0737129
-anchor_right = 0.0639378
-anchor_bottom = 0.0688652
-offset_left = 179.264
-offset_top = -153.259
-offset_right = 233.264
-offset_bottom = -110.259
+anchor_left = -0.0778981
+anchor_top = -0.0849448
+anchor_right = 0.149375
+anchor_bottom = 0.126987
+offset_left = 632.101
+offset_top = -483.497
+offset_right = 686.101
+offset_bottom = -440.497
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -80,19 +82,20 @@ metadata/_edit_use_anchors_ = true
 clip_children = 2
 z_index = 1
 position = Vector2(1370.87, 41.5416)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
 [node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_tr"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.057156
-anchor_top = -0.0737129
-anchor_right = 0.0717503
-anchor_bottom = 0.0766777
-offset_left = 179.264
-offset_top = -153.259
-offset_right = 233.264
-offset_bottom = -110.259
+anchor_left = -0.0570205
+anchor_top = -0.073953
+anchor_right = 0.182184
+anchor_bottom = 0.126615
+offset_left = 575.356
+offset_top = -542.843
+offset_right = 629.356
+offset_bottom = -499.843
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -103,20 +106,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="horizontal_bl" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
-position = Vector2(45.6958, 535.887)
+position = Vector2(45.6958, 398.8)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
 [node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_bl"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.041531
-anchor_top = -0.0405098
-anchor_right = 0.0483128
-anchor_bottom = 0.0376152
-offset_left = 179.264
-offset_top = -153.259
-offset_right = 233.264
-offset_bottom = -110.259
+anchor_left = -0.0416425
+anchor_top = -0.0402302
+anchor_right = 0.231085
+anchor_bottom = 0.27227
+offset_left = 508.291
+offset_top = -700.195
+offset_right = 562.291
+offset_bottom = -657.195
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -127,20 +131,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="horizontal_bc" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
-position = Vector2(706.207, 614.816)
+position = Vector2(706.207, 477.729)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
 [node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_bc"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0669216
-anchor_top = -0.0659004
-anchor_right = 0.0951878
-anchor_bottom = 0.102068
-offset_left = 179.264
-offset_top = -153.259
-offset_right = 233.264
-offset_bottom = -110.259
+anchor_left = -0.0669586
+anchor_top = -0.0661368
+anchor_right = 0.239291
+anchor_bottom = 0.134431
+offset_left = 473.847
+offset_top = -556.599
+offset_right = 527.847
+offset_bottom = -513.599
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -151,20 +156,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="horizontal_br" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
-position = Vector2(1404.11, 527.578)
+position = Vector2(1404.11, 390.491)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
 [node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_br"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.057156
-anchor_top = -0.106916
-anchor_right = 0.0717503
-anchor_bottom = 0.0610527
-offset_left = 179.264
-offset_top = -153.259
-offset_right = 233.264
-offset_bottom = -110.259
+anchor_left = -0.0573224
+anchor_top = -0.106906
+anchor_right = 0.159155
+anchor_bottom = 0.0822981
+offset_left = 614.887
+offset_top = -444.845
+offset_right = 668.887
+offset_bottom = -401.845
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -174,26 +180,26 @@ script = ExtResource("3_rmgvg")
 metadata/_edit_use_anchors_ = true
 
 [node name="vertical" type="Sprite2D" parent="Camera2D/windows"]
-visible = false
 position = Vector2(-190, -60)
 scale = Vector2(0.263519, 0.263519)
 
 [node name="vertical_tl" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
 position = Vector2(0, 58.671)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
 [node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_tl"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0450857
-anchor_top = -0.0343628
-anchor_right = 0.0642893
-anchor_bottom = 0.0515747
-offset_left = 99.0839
-offset_top = -246.406
-offset_right = 153.084
-offset_bottom = -203.406
+anchor_left = -0.0451179
+anchor_top = -0.0342472
+anchor_right = 0.129314
+anchor_bottom = 0.167457
+offset_left = 350.407
+offset_top = -941.725
+offset_right = 404.408
+offset_bottom = -898.725
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -205,19 +211,20 @@ metadata/_edit_use_anchors_ = true
 [node name="vertical_tc" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
 position = Vector2(664.088, 58.671)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
 [node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_tc"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0450857
-anchor_top = -0.0402222
-anchor_right = 0.0642893
-anchor_bottom = 0.0828247
-offset_left = 99.0839
-offset_top = -246.406
-offset_right = 153.084
-offset_bottom = -203.406
+anchor_left = -0.0451599
+anchor_top = -0.0401066
+anchor_right = 0.0883627
+anchor_bottom = 0.150802
+offset_left = 368.482
+offset_top = -931.412
+offset_right = 422.482
+offset_bottom = -888.412
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -229,19 +236,20 @@ metadata/_edit_use_anchors_ = true
 [node name="vertical_tr" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
 position = Vector2(1301.61, 47.2866)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
 [node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_tr"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0518421
-anchor_top = -0.0534932
-anchor_right = 0.0868298
-anchor_bottom = 0.0773662
-offset_left = 102.543
-offset_top = -251.611
-offset_right = 156.543
-offset_bottom = -208.611
+anchor_left = -0.0519972
+anchor_top = -0.0534099
+anchor_right = 0.132662
+anchor_bottom = 0.127272
+offset_left = 669.515
+offset_top = -636.999
+offset_right = 723.515
+offset_bottom = -593.999
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -254,20 +262,21 @@ metadata/_edit_use_anchors_ = true
 [node name="vertical_bl" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
 z_index = 2
-position = Vector2(144.202, 504.707)
+position = Vector2(144.202, 379.478)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
 [node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_bl"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0607107
-anchor_top = -0.0519409
-anchor_right = 0.0721018
-anchor_bottom = 0.0925903
-offset_left = 99.0839
-offset_top = -246.406
-offset_right = 153.084
-offset_bottom = -203.406
+anchor_left = -0.0710104
+anchor_top = -0.0623609
+anchor_right = 0.113649
+anchor_bottom = 0.118321
+offset_left = 395.978
+offset_top = -848.245
+offset_right = 449.979
+offset_bottom = -805.245
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -278,20 +287,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="vertical_bc" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
-position = Vector2(743.779, 516.091)
+position = Vector2(743.779, 390.862)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
 [node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_bc"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0450857
-anchor_top = -0.0597534
-anchor_right = 0.0799143
-anchor_bottom = 0.0769653
-offset_left = 99.0839
-offset_top = -246.406
-offset_right = 153.084
-offset_bottom = -203.406
+anchor_left = -0.044934
+anchor_top = -0.0599966
+anchor_right = 0.169839
+anchor_bottom = 0.136026
+offset_left = 277.861
+offset_top = -906.347
+offset_right = 331.861
+offset_bottom = -863.347
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -302,20 +312,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="vertical_br" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
-position = Vector2(1248.49, 489.528)
+position = Vector2(1248.49, 364.299)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
 [node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_br"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0528982
-anchor_top = -0.038269
-anchor_right = 0.0642893
-anchor_bottom = 0.055481
-offset_left = 99.0839
-offset_top = -246.406
-offset_right = 153.084
-offset_bottom = -203.406
+anchor_left = -0.0528886
+anchor_top = -0.0384057
+anchor_right = 0.190293
+anchor_bottom = 0.176935
+offset_left = 255.703
+offset_top = -890.138
+offset_right = 309.703
+offset_bottom = -847.138
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -330,6 +341,7 @@ scale = Vector2(0.23291, 0.23291)
 
 [node name="web_tl" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
 [node name="webButton" type="Button" parent="Camera2D/windows/web/web_tl"]
@@ -339,10 +351,10 @@ anchor_left = -0.0722656
 anchor_top = -0.078125
 anchor_right = 0.0625
 anchor_bottom = 0.0683594
-offset_left = 183.0
-offset_top = -177.0
-offset_right = 234.0
-offset_bottom = -122.0
+offset_left = 699.076
+offset_top = -537.818
+offset_right = 750.077
+offset_bottom = -482.818
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -354,6 +366,7 @@ metadata/_edit_use_anchors_ = true
 [node name="web_tc" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
 position = Vector2(416.469, 115.924)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
 [node name="webButton" type="Button" parent="Camera2D/windows/web/web_tc"]
@@ -363,10 +376,10 @@ anchor_left = -0.0722656
 anchor_top = -0.078125
 anchor_right = 0.0878906
 anchor_bottom = 0.0957031
-offset_left = 170.098
-offset_top = -178.968
-offset_right = 221.099
-offset_bottom = -123.968
+offset_left = 678.635
+offset_top = -578.706
+offset_right = 729.636
+offset_bottom = -523.706
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -378,6 +391,7 @@ metadata/_edit_use_anchors_ = true
 [node name="web_tr" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
 position = Vector2(1421.15, 128.805)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
 [node name="webButton" type="Button" parent="Camera2D/windows/web/web_tr"]
@@ -387,10 +401,10 @@ anchor_left = -0.0722656
 anchor_top = -0.113281
 anchor_right = 0.105469
 anchor_bottom = 0.078125
-offset_left = 183.0
-offset_top = -177.0
-offset_right = 234.0
-offset_bottom = -122.0
+offset_left = 617.294
+offset_top = -476.224
+offset_right = 668.294
+offset_bottom = -421.224
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -401,7 +415,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_bl" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(-310.742, 556.545)
+position = Vector2(-310.742, 414.858)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
 [node name="webButton" type="Button" parent="Camera2D/windows/web/web_bl"]
@@ -411,10 +426,10 @@ anchor_left = -0.0683594
 anchor_top = -0.0742188
 anchor_right = 0.0664063
 anchor_bottom = 0.0722656
-offset_left = 183.0
-offset_top = -177.0
-offset_right = 234.0
-offset_bottom = -122.0
+offset_left = 679.453
+offset_top = -536.993
+offset_right = 730.453
+offset_bottom = -481.993
 pivot_offset = Vector2(-369.652, 109.272)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
@@ -426,20 +441,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_bc" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(373.534, 644.025)
+position = Vector2(373.534, 502.339)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
 [node name="webButton" type="Button" parent="Camera2D/windows/web/web_bc"]
 z_index = 12
 anchors_preset = -1
-anchor_left = -0.0546875
-anchor_top = -0.0820313
-anchor_right = 0.0546875
-anchor_bottom = 0.0703125
-offset_left = 183.0
-offset_top = -177.0
-offset_right = 234.0
-offset_bottom = -122.0
+anchor_left = -0.101443
+anchor_top = -0.0822077
+anchor_right = 0.091479
+anchor_bottom = 0.0701896
+offset_left = 688.729
+offset_top = -530.972
+offset_right = 739.729
+offset_bottom = -475.972
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -450,7 +466,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_br" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(1064.79, 695.547)
+position = Vector2(1064.79, 553.86)
+scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
 [node name="webButton" type="Button" parent="Camera2D/windows/web/web_br"]
@@ -460,10 +477,10 @@ anchor_left = -0.0722656
 anchor_top = -0.0761719
 anchor_right = 0.0703125
 anchor_bottom = 0.078125
-offset_left = 183.0
-offset_top = -177.0
-offset_right = 234.0
-offset_bottom = -122.0
+offset_left = 658.181
+offset_top = -500.347
+offset_right = 709.181
+offset_bottom = -445.347
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")

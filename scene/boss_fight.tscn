@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ccj8maonaie8j"]
+[gd_scene load_steps=29 format=3 uid="uid://ccj8maonaie8j"]
 
 [ext_resource type="Script" path="res://scene/bossFightTracker.gd" id="1_gyllu"]
 [ext_resource type="Texture2D" uid="uid://yisa4tmxuxy6" path="res://art/boss_fight/boss_wallpaper.jpg" id="1_wh65m"]
@@ -7,9 +7,12 @@
 [ext_resource type="Shader" path="res://script/boss_fight/bossIconOutline.gdshader" id="3_mi3ml"]
 [ext_resource type="PackedScene" uid="uid://bms0bwdgvts7r" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
 [ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="5_a6ijo"]
+[ext_resource type="PackedScene" uid="uid://db53r2ddrbtf6" path="res://scene/TypingTest.tscn" id="6_ehbro"]
 [ext_resource type="Texture2D" uid="uid://c0v31lxubld58" path="res://art/final_boss_icon.png" id="6_umrtc"]
 [ext_resource type="Texture2D" uid="uid://7p3ysp3qt3im" path="res://art/taskbar_search.jpg" id="7_1oqjk"]
+[ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="7_cr526"]
 [ext_resource type="Texture2D" uid="uid://74iy0q7x8854" path="res://art/search_icon.png" id="8_i6oq7"]
+[ext_resource type="Script" path="res://scene/time_disp.gd" id="8_ylss4"]
 [ext_resource type="Texture2D" uid="uid://ilcph5ww7p23" path="res://art/recycling bin.png" id="9_a7knr"]
 [ext_resource type="Texture2D" uid="uid://d2klje3kh8kvq" path="res://art/taskbar_icons.png" id="10_rlfa2"]
 [ext_resource type="Shader" path="res://script/boss_fight/iconGlitch.gdshader" id="11_74vjm"]
@@ -28,31 +31,33 @@ shader_parameter/red_mult = 2.0
 
 [sub_resource type="Animation" id="Animation_ur8q2"]
 length = 0.001
-tracks/0/type = "bezier"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Camera2D/Control/AnimationPlayer/RichTextLabel:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_kvlqk"]
 resource_name = "terminal_output"
-length = 180.0
-tracks/0/type = "bezier"
+length = 480.0
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Camera2D/Control/AnimationPlayer/RichTextLabel:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 180)
+"times": PackedFloat32Array(0, 480),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s8ep5"]
@@ -134,9 +139,44 @@ mouse_filter = 2
 
 [node name="WindowClosingMinigame" parent="Camera2D/Control" instance=ExtResource("4_pt6ad")]
 
-[node name="BossTimer" type="Timer" parent="Camera2D/Control"]
+[node name="TypingTest" parent="Camera2D/Control" instance=ExtResource("6_ehbro")]
+z_index = 1
+z_as_relative = false
+offset_left = -267.0
+offset_top = -166.0
+offset_right = -267.0
+offset_bottom = -166.0
+scale = Vector2(0.44, 0.44)
+
+[node name="timeDisp" type="Sprite2D" parent="Camera2D/Control"]
+position = Vector2(182, -84)
+scale = Vector2(0.0935235, 0.0935235)
+texture = ExtResource("7_cr526")
+script = ExtResource("8_ylss4")
+
+[node name="BossTimer" type="Timer" parent="Camera2D/Control/timeDisp"]
 one_shot = true
 autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/Control/timeDisp"]
+anchors_preset = -1
+anchor_left = -0.464674
+anchor_top = -0.23017
+anchor_right = 0.360507
+anchor_bottom = 0.444248
+offset_top = -181.773
+offset_right = 40.0
+offset_bottom = -141.773
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/Control/timeDisp"]
+offset_left = -513.0
+offset_top = -428.0
+offset_right = 417.0
+offset_bottom = -160.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 120
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Control"]
 root_node = NodePath("../../..")
@@ -153,6 +193,7 @@ offset_left = -242.0
 offset_top = -128.0
 offset_right = 245.0
 offset_bottom = 107.0
+mouse_filter = 2
 theme_override_font_sizes/bold_italics_font_size = 10
 theme_override_font_sizes/italics_font_size = 10
 theme_override_font_sizes/mono_font_size = 10
@@ -296,6 +337,8 @@ position = Vector2(147.172, -1.9917)
 scale = Vector2(0.102138, 0.816852)
 texture = ExtResource("6_umrtc")
 
+[node name="timerWindow" type="Sprite2D" parent="Camera2D/Control"]
+
 [node name="warp" type="ColorRect" parent="Camera2D"]
 z_index = 5
 z_as_relative = false
@@ -306,6 +349,6 @@ offset_right = 257.0
 offset_bottom = 153.0
 mouse_filter = 2
 
-[connection signal="timeout" from="Camera2D/Control/BossTimer" to="Camera2D/Control" method="game_over"]
+[connection signal="timeout" from="Camera2D/Control/timeDisp/BossTimer" to="Camera2D/Control" method="game_over"]
 [connection signal="animation_finished" from="Camera2D/Control/AnimationPlayer" to="Camera2D/Control/WindowClosingMinigame" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Camera2D/Control/AnimationPlayer" to="Camera2D/Control/AnimationPlayer/RichTextLabel" method="_on_animation_player_animation_finished"]
