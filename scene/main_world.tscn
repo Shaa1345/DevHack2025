@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://74iy0q7x8854" path="res://art/search_icon.png" id="10_bisdu"]
 [ext_resource type="Texture2D" uid="uid://ilcph5ww7p23" path="res://art/recycling bin.png" id="11_ls6r7"]
 [ext_resource type="Texture2D" uid="uid://d2klje3kh8kvq" path="res://art/taskbar_icons.png" id="12_2n45a"]
-[ext_resource type="Script" path="res://scene/maze_area_2d.gd" id="12_6k2bv"]
+[ext_resource type="Script" path="res://Minigames/MazeMinigame/maze_area_2d.gd" id="12_6k2bv"]
 [ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="13_vcfnu"]
 [ext_resource type="Texture2D" uid="uid://cue28vp85phx4" path="res://art/memory_icon.png" id="14_lkdb2"]
 

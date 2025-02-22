@@ -12,11 +12,13 @@ bg_color = Color(0.219405, 0.673072, 0.700049, 1)
 [node name="Popup" type="CanvasLayer"]
 
 [node name="MazeGame" type="Control" parent="."]
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(520, 150)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 504.0
+offset_top = 192.0
+offset_right = 1009.0
+offset_bottom = 525.0
 
 [node name="PanelContainer" type="PanelContainer" parent="MazeGame"]
 layout_mode = 1
@@ -41,9 +43,10 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/margin_bottom = 26
 
-[node name="MazeMinigame" parent="MazeGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("2_aeot6")]
-
 [node name="Popup Container" type="PanelContainer" parent="MazeGame/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_0knfe")
+
+[node name="MazeMinigame" parent="MazeGame/PanelContainer/MarginContainer/VBoxContainer/Popup Container" instance=ExtResource("2_aeot6")]
+layout_mode = 2
