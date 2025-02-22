@@ -4,9 +4,16 @@ extends CharacterBody2D
 
 var speed = 100
 
+var can_move = true 
+
 var player_state 
 
 func _physics_process(delta: float) -> void:
+	#disable movement if boolean is false
+	if !can_move:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
 	var direction = Input.get_vector("left", "right", "up", "down")
 	
 	if direction.x == 0 and direction.y == 0:
@@ -37,5 +44,8 @@ func play_anim(dir):
 		if dir.x > 0.5 and dir.y < 0.5:
 			$AnimatedSprite2D.play("e-walk")
 			
-#func player():
+#function for player movement
+func set_movement(movement: bool):
+	can_move = movement
+	
 	
