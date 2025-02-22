@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://24gyx0gvdnb2"]
+[gd_scene load_steps=5 format=3 uid="uid://24gyx0gvdnb2"]
 
 [ext_resource type="Texture2D" uid="uid://wkfsk67r638e" path="res://images/application_window.png" id="1_wdlst"]
+[ext_resource type="PackedScene" uid="uid://cthsd00qurnqw" path="res://Minigames/MazeMinigame/MazeMinigame.tscn" id="2_aeot6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw78r"]
 texture = ExtResource("1_wdlst")
@@ -39,6 +40,8 @@ layout_mode = 2
 [node name="MarginContainer" type="MarginContainer" parent="MazeGame/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_bottom = 26
+
+[node name="MazeMinigame" parent="MazeGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("2_aeot6")]
 
 [node name="Popup Container" type="PanelContainer" parent="MazeGame/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
