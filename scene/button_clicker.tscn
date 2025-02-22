@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://conl10h0h8l0o"]
+
+[ext_resource type="Script" path="res://script/button_clicker.gd" id="1_5wio0"]
+
+[node name="ButtonClickerGame" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(33.1995, 19.0694)
+color = Color(0.172833, 0.172833, 0.172833, 1)
+
+[node name="Timer" type="Timer" parent="Node2D"]
+
+[node name="Button" type="Button" parent="Node2D"]
+offset_left = 528.0
+offset_top = 473.0
+offset_right = 590.0
+offset_bottom = 504.0
+scale = Vector2(3.33734, 2.64301)
+text = "Button"
+script = ExtResource("1_5wio0")
+
+[node name="TimesClicked" type="Label" parent="Node2D/Button"]
+offset_left = -85.0976
+offset_top = -80.9681
+offset_right = 683.902
+offset_bottom = 56.0319
+scale = Vector2(0.324533, 0.30951)
+theme_override_font_sizes/font_size = 100
+text = "Times Clicked: 0"
+
+[node name="TimeLeft" type="Label" parent="Node2D/Button"]
+offset_left = -17.3791
+offset_top = -169.125
+offset_right = 181.621
+offset_bottom = -32.125
+scale = Vector2(0.532524, 0.548208)
+theme_override_font_sizes/font_size = 100
+text = "0:05"
+
+[node name="Label" type="Label" parent="Node2D"]
+offset_left = 45.0
+offset_top = 37.0
+offset_right = 156.0
+offset_bottom = 60.0
+text = "Click 10 times!"
+
+[connection signal="pressed" from="Node2D/Button" to="Node2D/Button" method="_on_pressed"]
