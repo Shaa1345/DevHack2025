@@ -8,7 +8,7 @@ offset_top = 301.0
 offset_right = 94.0
 offset_bottom = 334.0
 scale = Vector2(7.17231, 6.27474)
-color = Color(0.630943, 0.460037, 0.789908, 1)
+color = Color(0.320539, 0.58645, 0.715044, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 378.0
@@ -24,7 +24,7 @@ offset_top = 301.0
 offset_right = 711.0
 offset_bottom = 334.0
 scale = Vector2(7.17231, 6.27474)
-color = Color(0.630943, 0.460037, 0.789908, 1)
+color = Color(0.735727, 0.775002, 0.390345, 1)
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="."]
 offset_left = 985.0
