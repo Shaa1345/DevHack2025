@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=24 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
-[ext_resource type="Texture2D" uid="uid://na1r5rhaf8ua" path="res://art/desktop_background.jpg" id="2_7m54x"]
+[ext_resource type="Texture2D" uid="uid://dy84ww438bps4" path="res://background.png" id="3_jrrdg"]
 [ext_resource type="Texture2D" uid="uid://c8qffuora84qf" path="res://art/maze_icon.png" id="3_q3lve"]
 [ext_resource type="Texture2D" uid="uid://bar4nojb8ap6i" path="res://art/photos_icon.png" id="4_1gm0t"]
 [ext_resource type="Texture2D" uid="uid://dkk5k66y4bn7d" path="res://art/tiles_icon.png" id="5_4kty5"]
@@ -15,12 +15,21 @@
 [ext_resource type="Script" path="res://Minigames/MazeMinigame/maze_area_2d.gd" id="12_6k2bv"]
 [ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="13_vcfnu"]
 [ext_resource type="Texture2D" uid="uid://cue28vp85phx4" path="res://art/memory_icon.png" id="14_lkdb2"]
+[ext_resource type="Script" path="res://scene/colour_2d.gd" id="14_vr5i2"]
+[ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
+[ext_resource type="Texture2D" uid="uid://vtpykj6pk5iy" path="res://art/colour.png" id="15_g6uri"]
+[ext_resource type="AudioStream" uid="uid://x8udsscqdgqk" path="res://music/HEROICCC.mp3" id="19_2spe2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
 radius = 13.8924
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wnjyv"]
 size = Vector2(27, 29)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5f7f"]
+radius = 15.0333
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haoxv"]
 
 [node name="main_world" type="Node2D"]
 
@@ -37,7 +46,7 @@ zoom = Vector2(2.5, 2.5)
 [node name="DesktopBackground" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-1, -1)
 scale = Vector2(0.265625, 0.264815)
-texture = ExtResource("2_7m54x")
+texture = ExtResource("3_jrrdg")
 
 [node name="PhotosIcon" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-169, -103)
@@ -58,6 +67,11 @@ texture = ExtResource("6_e7he7")
 position = Vector2(-216, -9)
 scale = Vector2(0.0787354, 0.093567)
 texture = ExtResource("6_xp3ll")
+
+[node name="ToDoList" type="Sprite2D" parent="Camera2D"]
+position = Vector2(170, -11)
+scale = Vector2(0.105299, 0.103817)
+texture = ExtResource("13_vcfnu")
 
 [node name="TaskbarSearch" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-75, 130)
@@ -84,6 +98,11 @@ position = Vector2(-217, -104)
 scale = Vector2(0.0812988, 0.0808106)
 texture = ExtResource("11_ls6r7")
 
+[node name="MemoryIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-214, -56)
+scale = Vector2(0.0823975, 0.0881348)
+texture = ExtResource("14_lkdb2")
+
 [node name="WeatherIcon" type="Sprite2D" parent="Camera2D"]
 z_index = 1
 position = Vector2(-240, 129)
@@ -102,6 +121,18 @@ texture = ExtResource("3_q3lve")
 position = Vector2(-165, -54)
 shape = SubResource("RectangleShape2D_wnjyv")
 
+[node name="Colour2D" type="Area2D" parent="Camera2D"]
+script = ExtResource("14_vr5i2")
+
+[node name="ColourIcon" type="Sprite2D" parent="Camera2D/Colour2D"]
+position = Vector2(-167, -9)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("15_g6uri")
+
+[node name="ColourCollisionShape" type="CollisionShape2D" parent="Camera2D/Colour2D"]
+position = Vector2(-168, -8)
+shape = SubResource("CircleShape2D_e5f7f")
+
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
 scale = Vector2(0.105299, 0.103817)
@@ -111,3 +142,22 @@ texture = ExtResource("13_vcfnu")
 position = Vector2(-213, -56)
 scale = Vector2(0.0823975, 0.0881348)
 texture = ExtResource("14_lkdb2")
+
+[node name="TileGame" type="Area2D" parent="."]
+script = ExtResource("15_0qigl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileGame"]
+shape = SubResource("RectangleShape2D_haoxv")
+
+[node name="Label" type="Label" parent="TileGame"]
+offset_left = 180.0
+offset_top = 3350.0
+offset_right = 603.0
+offset_bottom = 3487.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "You Win!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_2spe2")
+autoplay = true
