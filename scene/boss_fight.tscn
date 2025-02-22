@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://script/boss_fight/boss_background.gd" id="2_jehqk"]
 [ext_resource type="Shader" path="res://script/boss_fight/background_shader.gdshader" id="2_pribf"]
 [ext_resource type="Shader" path="res://script/boss_fight/bossIconOutline.gdshader" id="3_mi3ml"]
-[ext_resource type="PackedScene" uid="uid://bms0bwdgvts7r" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
+[ext_resource type="PackedScene" uid="uid://boi6ifbks581i" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
 [ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="5_a6ijo"]
 [ext_resource type="PackedScene" uid="uid://db53r2ddrbtf6" path="res://scene/TypingTest.tscn" id="6_ehbro"]
 [ext_resource type="Texture2D" uid="uid://c0v31lxubld58" path="res://art/final_boss_icon.png" id="6_umrtc"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://otx4jpuwsbf5"]
 
-[ext_resource type="Texture2D" uid="uid://na1r5rhaf8ua" path="res://art/desktop_background.jpg" id="2_2wsry"]
+[ext_resource type="Texture2D" uid="uid://dy84ww438bps4" path="res://background.png" id="1_mwgma"]
 [ext_resource type="Texture2D" uid="uid://c8qffuora84qf" path="res://art/maze_icon.png" id="3_ohxy2"]
 [ext_resource type="Texture2D" uid="uid://bar4nojb8ap6i" path="res://art/photos_icon.png" id="4_e5la7"]
 [ext_resource type="Texture2D" uid="uid://dkk5k66y4bn7d" path="res://art/tiles_icon.png" id="5_q72sf"]
@@ -20,9 +20,9 @@ position = Vector2(1, 0)
 zoom = Vector2(2.5, 2.5)
 
 [node name="DesktopBackground" type="Sprite2D" parent="Camera2D"]
-position = Vector2(-1, -1)
+position = Vector2(-1.00006, -1.00003)
 scale = Vector2(0.265625, 0.264815)
-texture = ExtResource("2_2wsry")
+texture = ExtResource("1_mwgma")
 
 [node name="MazeIcon" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-165, -54)

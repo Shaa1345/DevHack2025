@@ -6,10 +6,12 @@
 [sub_resource type="SystemFont" id="SystemFont_up1eq"]
 font_names = PackedStringArray("Monospace")
 font_weight = 750
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_ard80"]
 font_names = PackedStringArray("Monospace")
 font_italic = true
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_1u3pe"]
 base_font = SubResource("SystemFont_ard80")
@@ -17,6 +19,7 @@ base_font = SubResource("SystemFont_ard80")
 [sub_resource type="SystemFont" id="SystemFont_mt4d0"]
 font_names = PackedStringArray("Monospace")
 font_italic = true
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_7tmwf"]
 fallbacks = Array[Font]([SubResource("SystemFont_mt4d0")])
@@ -26,6 +29,7 @@ base_font = SubResource("FontVariation_1u3pe")
 font_names = PackedStringArray("Monospace")
 font_italic = true
 font_weight = 800
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_uvhx8"]
 fallbacks = Array[Font]([null])
@@ -34,12 +38,14 @@ base_font = SubResource("SystemFont_g7pjo")
 [sub_resource type="SystemFont" id="SystemFont_fft0h"]
 font_names = PackedStringArray("Monospace")
 font_weight = 725
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_n67of"]
 base_font = SubResource("SystemFont_fft0h")
 
 [sub_resource type="SystemFont" id="SystemFont_34avr"]
 font_names = PackedStringArray("Monospace")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f73b0"]
 
