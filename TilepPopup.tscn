@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://8c5yadvvjowx"]
+[gd_scene load_steps=4 format=3 uid="uid://dyh0xdorx4okm"]
 
 [ext_resource type="PackedScene" uid="uid://dxua5jne87yp" path="res://Minigames/TileSlideMinigame/background.tscn" id="1_56b0f"]
+[ext_resource type="Script" path="res://close_tile_popup.gd" id="2_bf64h"]
+[ext_resource type="Texture2D" uid="uid://qc1er3e3uden" path="res://images/close_button.png" id="2_gfevl"]
 
 [node name="TilepPopup" type="CanvasLayer"]
 
 [node name="background" parent="." instance=ExtResource("1_56b0f")]
+
+[node name="closeTilePopup" type="Sprite2D" parent="."]
+position = Vector2(657, 18)
+texture = ExtResource("2_gfevl")
+script = ExtResource("2_bf64h")

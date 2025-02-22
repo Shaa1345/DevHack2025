@@ -73,5 +73,5 @@ Copyright (C) Girlypops Corporation. All rights reserved."
 position = Vector2(13.1897, 14.9678)
 shape = SubResource("RectangleShape2D_qca70")
 
-[connection signal="text_submitted" from="TerminalInput" to="TerminalInput" method="_on_text_submitted"]
 [connection signal="text_submitted" from="TerminalInput" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="TerminalInput" to="TerminalInput" method="_on_text_submitted"]
