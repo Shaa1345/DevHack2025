@@ -1,11 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://ccj8maonaie8j"]
+[gd_scene load_steps=23 format=3 uid="uid://ccj8maonaie8j"]
 
-[ext_resource type="Script" path="res://scene/bossFightTracker.gd" id="1_gyllu"]
 [ext_resource type="Texture2D" uid="uid://yisa4tmxuxy6" path="res://art/boss_fight/boss_wallpaper.jpg" id="1_wh65m"]
 [ext_resource type="Script" path="res://script/boss_fight/boss_background.gd" id="2_jehqk"]
 [ext_resource type="Shader" path="res://script/boss_fight/background_shader.gdshader" id="2_pribf"]
 [ext_resource type="Shader" path="res://script/boss_fight/bossIconOutline.gdshader" id="3_mi3ml"]
-[ext_resource type="PackedScene" uid="uid://csme7tg2fskvp" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
 [ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="5_a6ijo"]
 [ext_resource type="Texture2D" uid="uid://c0v31lxubld58" path="res://art/final_boss_icon.png" id="6_umrtc"]
 [ext_resource type="Texture2D" uid="uid://7p3ysp3qt3im" path="res://art/taskbar_search.jpg" id="7_1oqjk"]
@@ -15,7 +13,6 @@
 [ext_resource type="Shader" path="res://script/boss_fight/iconGlitch.gdshader" id="11_74vjm"]
 [ext_resource type="Texture2D" uid="uid://7g1t50fncwlf" path="res://art/weather_icon.png" id="11_axbw5"]
 [ext_resource type="Script" path="res://script/boss_fight/terminalConsoleTypewriter.gd" id="12_xeo2v"]
-[ext_resource type="Script" path="res://scene/resize.gd" id="15_fvlg5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7qyt7"]
 shader = ExtResource("2_pribf")
@@ -26,12 +23,44 @@ shader_parameter/blue_shift = 5.0
 shader_parameter/green_shift = 1.0
 shader_parameter/red_mult = 2.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ysl6u"]
+shader = ExtResource("3_mi3ml")
+shader_parameter/color = Color(1, 0.65, 0.65, 0.686275)
+shader_parameter/width = 100.0
+shader_parameter/pattern = 2
+shader_parameter/inside = false
+shader_parameter/add_margins = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3dpll"]
+shader = ExtResource("11_74vjm")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.145
+shader_parameter/scanlines_width = 0.376
+shader_parameter/grille_opacity = 0.018
+shader_parameter/resolution = Vector2(1280, 960)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 29.245
+shader_parameter/roll_variation = 3.614
+shader_parameter/distort_intensity = 0.01
+shader_parameter/noise_opacity = 0.179
+shader_parameter/noise_speed = 10.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = -0.019
+shader_parameter/brightness = 1.0
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.2
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = -0.1
+shader_parameter/vignette_opacity = 0.351
+
 [sub_resource type="Animation" id="Animation_ur8q2"]
 length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D/Control/AnimationPlayer/RichTextLabel:visible_ratio")
+tracks/0/path = NodePath("AnimationPlayer/RichTextLabel:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -46,7 +75,7 @@ length = 180.0
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D/Control/AnimationPlayer/RichTextLabel:visible_ratio")
+tracks/0/path = NodePath("AnimationPlayer/RichTextLabel:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -69,40 +98,7 @@ bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyr2y"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ysl6u"]
-shader = ExtResource("3_mi3ml")
-shader_parameter/color = Color(1, 0.65, 0.65, 0.686275)
-shader_parameter/width = 100.0
-shader_parameter/pattern = 2
-shader_parameter/inside = false
-shader_parameter/add_margins = false
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_thft7"]
-shader = ExtResource("11_74vjm")
-shader_parameter/overlay = false
-shader_parameter/scanlines_opacity = 0.145
-shader_parameter/scanlines_width = 0.376
-shader_parameter/grille_opacity = 0.018
-shader_parameter/resolution = Vector2(1280, 960)
-shader_parameter/pixelate = true
-shader_parameter/roll = true
-shader_parameter/roll_speed = 2.0
-shader_parameter/roll_size = 29.245
-shader_parameter/roll_variation = 3.614
-shader_parameter/distort_intensity = 0.1
-shader_parameter/noise_opacity = 0.179
-shader_parameter/noise_speed = 10.0
-shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = -0.019
-shader_parameter/brightness = 1.0
-shader_parameter/discolor = false
-shader_parameter/warp_amount = 0.058
-shader_parameter/clip_warp = false
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.5
-
 [node name="boss_fight" type="Node2D"]
-script = ExtResource("1_gyllu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
@@ -116,37 +112,78 @@ offset_right = 39.0
 offset_bottom = 40.0
 script = ExtResource("2_jehqk")
 
-[node name="DesktopBackground" type="Sprite2D" parent="Camera2D/Control"]
+[node name="DesktopBackground" type="Sprite2D" parent="Camera2D"]
 clip_children = 2
-position = Vector2(0.890501, 0.500006)
+position = Vector2(-0.109499, 0.500006)
 scale = Vector2(0.707034, 0.704878)
 texture = ExtResource("1_wh65m")
+script = ExtResource("2_jehqk")
 
-[node name="shader" type="ColorRect" parent="Camera2D/Control/DesktopBackground"]
+[node name="shader" type="ColorRect" parent="Camera2D/DesktopBackground"]
+visible = false
 light_mask = 0
 z_index = 10
 material = SubResource("ShaderMaterial_7qyt7")
-offset_left = -591.0
-offset_top = -143.0
-offset_right = 590.0
-offset_bottom = 118.0
-mouse_filter = 2
+offset_left = -402.938
+offset_top = -122.716
+offset_right = 583.063
+offset_bottom = 240.284
 
-[node name="WindowClosingMinigame" parent="Camera2D/Control" instance=ExtResource("4_pt6ad")]
+[node name="Taskbar" type="Sprite2D" parent="Camera2D"]
+clip_children = 2
+material = SubResource("ShaderMaterial_ysl6u")
+position = Vector2(1.19209e-07, 128)
+scale = Vector2(0.501965, 0.0627648)
+texture = ExtResource("5_a6ijo")
 
-[node name="BossTimer" type="Timer" parent="Camera2D/Control"]
-one_shot = true
-autostart = true
+[node name="TaskbarSearch" type="Sprite2D" parent="Camera2D/Taskbar"]
+position = Vector2(-147.421, -15.9324)
+scale = Vector2(0.279828, 2.36927)
+texture = ExtResource("7_1oqjk")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Control"]
-root_node = NodePath("../../..")
+[node name="SearchIcon" type="Sprite2D" parent="Camera2D/Taskbar"]
+position = Vector2(-278.904, -15.9324)
+scale = Vector2(0.16809, 1.49367)
+texture = ExtResource("8_i6oq7")
+
+[node name="RecyclingBin" type="Sprite2D" parent="Camera2D/Taskbar"]
+position = Vector2(11.953, -15.9324)
+scale = Vector2(0.0817101, 0.659315)
+texture = ExtResource("9_a7knr")
+
+[node name="TaskbarIcons" type="Sprite2D" parent="Camera2D/Taskbar"]
+position = Vector2(73.7103, 0)
+scale = Vector2(0.147409, 1.1982)
+texture = ExtResource("10_rlfa2")
+
+[node name="WeatherIcon" type="Sprite2D" parent="Camera2D/Taskbar"]
+light_mask = 0
+position = Vector2(-476.129, -31.865)
+scale = Vector2(0.0622551, 0.52901)
+texture = ExtResource("11_axbw5")
+
+[node name="finalBossIcon" type="Sprite2D" parent="Camera2D/Taskbar"]
+material = SubResource("ShaderMaterial_ysl6u")
+position = Vector2(147.172, -1.9917)
+scale = Vector2(0.102138, 0.816852)
+texture = ExtResource("6_umrtc")
+
+[node name="warp" type="ColorRect" parent="Camera2D"]
+visibility_layer = 32
+z_index = 5
+material = SubResource("ShaderMaterial_3dpll")
+offset_left = -257.0
+offset_top = -146.0
+offset_right = 258.0
+offset_bottom = 147.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_s8ep5")
 }
 script = ExtResource("12_xeo2v")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/Control/AnimationPlayer"]
-visible = false
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimationPlayer"]
 light_mask = 0
 z_index = 1
 clip_contents = false
@@ -154,6 +191,7 @@ offset_left = -242.0
 offset_top = -128.0
 offset_right = 245.0
 offset_bottom = 107.0
+focus_mode = 2
 theme_override_font_sizes/bold_italics_font_size = 10
 theme_override_font_sizes/italics_font_size = 10
 theme_override_font_sizes/mono_font_size = 10
@@ -251,63 +289,16 @@ scroll_active = false
 scroll_following = true
 autowrap_mode = 1
 shortcut_keys_enabled = false
+selection_enabled = true
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 visible_characters = 0
 visible_ratio = 0.0
 text_direction = 1
-script = ExtResource("15_fvlg5")
 
-[node name="Taskbar" type="Sprite2D" parent="Camera2D/Control"]
-clip_children = 2
-material = SubResource("ShaderMaterial_ysl6u")
-position = Vector2(4, 132)
-scale = Vector2(0.51, 0.063)
-texture = ExtResource("5_a6ijo")
+[node name="BossTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
 
-[node name="TaskbarSearch" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
-position = Vector2(-147.421, -15.9324)
-scale = Vector2(0.279828, 2.36927)
-texture = ExtResource("7_1oqjk")
-
-[node name="SearchIcon" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
-position = Vector2(-278.904, -15.9324)
-scale = Vector2(0.16809, 1.49367)
-texture = ExtResource("8_i6oq7")
-
-[node name="RecyclingBin" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
-position = Vector2(11.953, -15.9324)
-scale = Vector2(0.0817101, 0.659315)
-texture = ExtResource("9_a7knr")
-
-[node name="TaskbarIcons" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
-position = Vector2(73.7103, 0)
-scale = Vector2(0.147409, 1.1982)
-texture = ExtResource("10_rlfa2")
-
-[node name="WeatherIcon" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
-light_mask = 0
-position = Vector2(-464.365, -15.9919)
-scale = Vector2(0.0622551, 0.52901)
-texture = ExtResource("11_axbw5")
-
-[node name="finalBossIcon" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
-material = SubResource("ShaderMaterial_ysl6u")
-position = Vector2(147.172, -1.9917)
-scale = Vector2(0.102138, 0.816852)
-texture = ExtResource("6_umrtc")
-
-[node name="warp" type="ColorRect" parent="Camera2D"]
-visible = false
-z_index = 5
-z_as_relative = false
-material = SubResource("ShaderMaterial_thft7")
-offset_left = -257.0
-offset_top = -152.0
-offset_right = 257.0
-offset_bottom = 153.0
-mouse_filter = 2
-
-[connection signal="timeout" from="Camera2D/Control/BossTimer" to="Camera2D/Control" method="game_over"]
-[connection signal="animation_finished" from="Camera2D/Control/AnimationPlayer" to="Camera2D/Control/WindowClosingMinigame" method="_on_animation_player_animation_finished"]
-[connection signal="animation_finished" from="Camera2D/Control/AnimationPlayer" to="Camera2D/Control/AnimationPlayer/RichTextLabel" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="BossTimer" to="Camera2D/DesktopBackground" method="_on_boss_timer_timeout"]

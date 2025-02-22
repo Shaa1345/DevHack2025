@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddyyj4adm45i5"]
+
+[ext_resource type="Script" path="res://scene/typing_test_control.gd" id="1_22pfg"]
+
+[node name="TypingTest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_22pfg")
+
+[node name="WordDisplay" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 15.0
+offset_right = 1067.0
+offset_bottom = 163.0
+bbcode_enabled = true
+
+[node name="UserInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 164.0
+offset_right = 1011.0
+offset_bottom = 324.0
+caret_blink = true
+caret_force_displayed = true

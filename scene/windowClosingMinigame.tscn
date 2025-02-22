@@ -1,0 +1,498 @@
+[gd_scene load_steps=10 format=3 uid="uid://csme7tg2fskvp"]
+
+[ext_resource type="Script" path="res://scene/hideWindowsGameDone.gd" id="1_f8wtr"]
+[ext_resource type="Script" path="res://scene/windowsAppear.gd" id="1_nmc11"]
+[ext_resource type="Texture2D" uid="uid://bep4qqjdsfpyu" path="res://art/boss_fight/windows/horizontal.png" id="1_qa3nj"]
+[ext_resource type="Texture2D" uid="uid://dx75116es4io4" path="res://art/boss_fight/windows/vertical.png" id="2_kw4lm"]
+[ext_resource type="Script" path="res://scene/buttonPressed.gd" id="3_rmgvg"]
+[ext_resource type="Texture2D" uid="uid://cgjkr5762esop" path="res://art/boss_fight/windows/web.png" id="3_vnitf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbypk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n2w4u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3i1me"]
+
+[node name="WindowClosingMinigame" type="Node"]
+script = ExtResource("1_f8wtr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+zoom = Vector2(2.5, 2.5)
+
+[node name="windows" type="Sprite2D" parent="Camera2D"]
+script = ExtResource("1_nmc11")
+
+[node name="horizontal" type="Sprite2D" parent="Camera2D/windows"]
+visible = false
+position = Vector2(-171, -64)
+scale = Vector2(0.240723, 0.240723)
+
+[node name="horizontal_tl" type="Sprite2D" parent="Camera2D/windows/horizontal"]
+clip_children = 2
+z_index = 2
+position = Vector2(-8.30832, 70.6207)
+texture = ExtResource("1_qa3nj")
+
+[node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_tl"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0337425
+anchor_top = -0.0735344
+anchor_right = 0.0639138
+anchor_bottom = 0.0377937
+offset_left = 171.276
+offset_top = -153.35
+offset_right = 225.276
+offset_bottom = -110.35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+action_mode = 0
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="horizontal_tc" type="Sprite2D" parent="Camera2D/windows/horizontal"]
+clip_children = 2
+position = Vector2(706.207, -20.7708)
+texture = ExtResource("1_qa3nj")
+
+[node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_tc"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0669216
+anchor_top = -0.0737129
+anchor_right = 0.0639378
+anchor_bottom = 0.0688652
+offset_left = 179.264
+offset_top = -153.259
+offset_right = 233.264
+offset_bottom = -110.259
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="horizontal_tr" type="Sprite2D" parent="Camera2D/windows/horizontal"]
+clip_children = 2
+z_index = 1
+position = Vector2(1370.87, 41.5416)
+texture = ExtResource("1_qa3nj")
+
+[node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_tr"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.057156
+anchor_top = -0.0737129
+anchor_right = 0.0717503
+anchor_bottom = 0.0766777
+offset_left = 179.264
+offset_top = -153.259
+offset_right = 233.264
+offset_bottom = -110.259
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="horizontal_bl" type="Sprite2D" parent="Camera2D/windows/horizontal"]
+clip_children = 2
+position = Vector2(45.6958, 535.887)
+texture = ExtResource("1_qa3nj")
+
+[node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_bl"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.041531
+anchor_top = -0.0405098
+anchor_right = 0.0483128
+anchor_bottom = 0.0376152
+offset_left = 179.264
+offset_top = -153.259
+offset_right = 233.264
+offset_bottom = -110.259
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="horizontal_bc" type="Sprite2D" parent="Camera2D/windows/horizontal"]
+clip_children = 2
+position = Vector2(706.207, 614.816)
+texture = ExtResource("1_qa3nj")
+
+[node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_bc"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0669216
+anchor_top = -0.0659004
+anchor_right = 0.0951878
+anchor_bottom = 0.102068
+offset_left = 179.264
+offset_top = -153.259
+offset_right = 233.264
+offset_bottom = -110.259
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="horizontal_br" type="Sprite2D" parent="Camera2D/windows/horizontal"]
+clip_children = 2
+position = Vector2(1404.11, 527.578)
+texture = ExtResource("1_qa3nj")
+
+[node name="horizontalButton" type="Button" parent="Camera2D/windows/horizontal/horizontal_br"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.057156
+anchor_top = -0.106916
+anchor_right = 0.0717503
+anchor_bottom = 0.0610527
+offset_left = 179.264
+offset_top = -153.259
+offset_right = 233.264
+offset_bottom = -110.259
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="vertical" type="Sprite2D" parent="Camera2D/windows"]
+visible = false
+position = Vector2(-190, -60)
+scale = Vector2(0.263519, 0.263519)
+
+[node name="vertical_tl" type="Sprite2D" parent="Camera2D/windows/vertical"]
+clip_children = 2
+position = Vector2(0, 58.671)
+texture = ExtResource("2_kw4lm")
+
+[node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_tl"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0450857
+anchor_top = -0.0343628
+anchor_right = 0.0642893
+anchor_bottom = 0.0515747
+offset_left = 99.0839
+offset_top = -246.406
+offset_right = 153.084
+offset_bottom = -203.406
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="vertical_tc" type="Sprite2D" parent="Camera2D/windows/vertical"]
+clip_children = 2
+position = Vector2(664.088, 58.671)
+texture = ExtResource("2_kw4lm")
+
+[node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_tc"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0450857
+anchor_top = -0.0402222
+anchor_right = 0.0642893
+anchor_bottom = 0.0828247
+offset_left = 99.0839
+offset_top = -246.406
+offset_right = 153.084
+offset_bottom = -203.406
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="vertical_tr" type="Sprite2D" parent="Camera2D/windows/vertical"]
+clip_children = 2
+position = Vector2(1301.61, 47.2866)
+texture = ExtResource("2_kw4lm")
+
+[node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_tr"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0518421
+anchor_top = -0.0534932
+anchor_right = 0.0868298
+anchor_bottom = 0.0773662
+offset_left = 102.543
+offset_top = -251.611
+offset_right = 156.543
+offset_bottom = -208.611
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+action_mode = 0
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="vertical_bl" type="Sprite2D" parent="Camera2D/windows/vertical"]
+clip_children = 2
+z_index = 2
+position = Vector2(144.202, 504.707)
+texture = ExtResource("2_kw4lm")
+
+[node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_bl"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0607107
+anchor_top = -0.0519409
+anchor_right = 0.0721018
+anchor_bottom = 0.0925903
+offset_left = 99.0839
+offset_top = -246.406
+offset_right = 153.084
+offset_bottom = -203.406
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="vertical_bc" type="Sprite2D" parent="Camera2D/windows/vertical"]
+clip_children = 2
+position = Vector2(743.779, 516.091)
+texture = ExtResource("2_kw4lm")
+
+[node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_bc"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0450857
+anchor_top = -0.0597534
+anchor_right = 0.0799143
+anchor_bottom = 0.0769653
+offset_left = 99.0839
+offset_top = -246.406
+offset_right = 153.084
+offset_bottom = -203.406
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="vertical_br" type="Sprite2D" parent="Camera2D/windows/vertical"]
+clip_children = 2
+position = Vector2(1248.49, 489.528)
+texture = ExtResource("2_kw4lm")
+
+[node name="verticalButton" type="Button" parent="Camera2D/windows/vertical/vertical_br"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0528982
+anchor_top = -0.038269
+anchor_right = 0.0642893
+anchor_bottom = 0.055481
+offset_left = 99.0839
+offset_top = -246.406
+offset_right = 153.084
+offset_bottom = -203.406
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="web" type="Sprite2D" parent="Camera2D/windows"]
+position = Vector2(-160, -75)
+scale = Vector2(0.23291, 0.23291)
+
+[node name="web_tl" type="Sprite2D" parent="Camera2D/windows/web"]
+clip_children = 2
+texture = ExtResource("3_vnitf")
+
+[node name="webButton" type="Button" parent="Camera2D/windows/web/web_tl"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0722656
+anchor_top = -0.078125
+anchor_right = 0.0625
+anchor_bottom = 0.0683594
+offset_left = 183.0
+offset_top = -177.0
+offset_right = 234.0
+offset_bottom = -122.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="web_tc" type="Sprite2D" parent="Camera2D/windows/web"]
+clip_children = 2
+position = Vector2(416.469, 115.924)
+texture = ExtResource("3_vnitf")
+
+[node name="webButton" type="Button" parent="Camera2D/windows/web/web_tc"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0722656
+anchor_top = -0.078125
+anchor_right = 0.0878906
+anchor_bottom = 0.0957031
+offset_left = 170.098
+offset_top = -178.968
+offset_right = 221.099
+offset_bottom = -123.968
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="web_tr" type="Sprite2D" parent="Camera2D/windows/web"]
+clip_children = 2
+position = Vector2(1421.15, 128.805)
+texture = ExtResource("3_vnitf")
+
+[node name="webButton" type="Button" parent="Camera2D/windows/web/web_tr"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0722656
+anchor_top = -0.113281
+anchor_right = 0.105469
+anchor_bottom = 0.078125
+offset_left = 183.0
+offset_top = -177.0
+offset_right = 234.0
+offset_bottom = -122.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="web_bl" type="Sprite2D" parent="Camera2D/windows/web"]
+clip_children = 2
+position = Vector2(-310.742, 556.545)
+texture = ExtResource("3_vnitf")
+
+[node name="webButton" type="Button" parent="Camera2D/windows/web/web_bl"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0683594
+anchor_top = -0.0742188
+anchor_right = 0.0664063
+anchor_bottom = 0.0722656
+offset_left = 183.0
+offset_top = -177.0
+offset_right = 234.0
+offset_bottom = -122.0
+pivot_offset = Vector2(-369.652, 109.272)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="web_bc" type="Sprite2D" parent="Camera2D/windows/web"]
+clip_children = 2
+position = Vector2(373.534, 644.025)
+texture = ExtResource("3_vnitf")
+
+[node name="webButton" type="Button" parent="Camera2D/windows/web/web_bc"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0546875
+anchor_top = -0.0820313
+anchor_right = 0.0546875
+anchor_bottom = 0.0703125
+offset_left = 183.0
+offset_top = -177.0
+offset_right = 234.0
+offset_bottom = -122.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="web_br" type="Sprite2D" parent="Camera2D/windows/web"]
+clip_children = 2
+position = Vector2(1064.79, 695.547)
+texture = ExtResource("3_vnitf")
+
+[node name="webButton" type="Button" parent="Camera2D/windows/web/web_br"]
+z_index = 12
+anchors_preset = -1
+anchor_left = -0.0722656
+anchor_top = -0.0761719
+anchor_right = 0.0703125
+anchor_bottom = 0.078125
+offset_left = 183.0
+offset_top = -177.0
+offset_right = 234.0
+offset_bottom = -122.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
+keep_pressed_outside = true
+flat = true
+script = ExtResource("3_rmgvg")
+metadata/_edit_use_anchors_ = true
+
+[node name="ClockSpawnTimer" type="Timer" parent="Camera2D/windows"]
+autostart = true
+
+[connection signal="pressed" from="Camera2D/windows/horizontal/horizontal_tl/horizontalButton" to="Camera2D/windows/horizontal/horizontal_tl/horizontalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/horizontal/horizontal_tc/horizontalButton" to="Camera2D/windows/horizontal/horizontal_tc/horizontalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/horizontal/horizontal_tr/horizontalButton" to="Camera2D/windows/horizontal/horizontal_tr/horizontalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/horizontal/horizontal_bl/horizontalButton" to="Camera2D/windows/horizontal/horizontal_bl/horizontalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/horizontal/horizontal_bc/horizontalButton" to="Camera2D/windows/horizontal/horizontal_bc/horizontalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/horizontal/horizontal_br/horizontalButton" to="Camera2D/windows/horizontal/horizontal_br/horizontalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/vertical/vertical_tl/verticalButton" to="Camera2D/windows/vertical/vertical_tl/verticalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/vertical/vertical_tc/verticalButton" to="Camera2D/windows/vertical/vertical_tc/verticalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/vertical/vertical_tr/verticalButton" to="Camera2D/windows/vertical/vertical_tr/verticalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/vertical/vertical_bl/verticalButton" to="Camera2D/windows/vertical/vertical_bl/verticalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/vertical/vertical_bc/verticalButton" to="Camera2D/windows/vertical/vertical_bc/verticalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/vertical/vertical_br/verticalButton" to="Camera2D/windows/vertical/vertical_br/verticalButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/web/web_tl/webButton" to="Camera2D/windows/web/web_tl/webButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/web/web_tc/webButton" to="Camera2D/windows/web/web_tc/webButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/web/web_tr/webButton" to="Camera2D/windows/web/web_tr/webButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/web/web_bl/webButton" to="Camera2D/windows/web/web_bl/webButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/web/web_bc/webButton" to="Camera2D/windows/web/web_bc/webButton" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/windows/web/web_br/webButton" to="Camera2D/windows/web/web_br/webButton" method="_on_pressed"]
+[connection signal="timeout" from="Camera2D/windows/ClockSpawnTimer" to="Camera2D/windows" method="spawnWindow"]
