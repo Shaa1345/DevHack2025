@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8c5yadvvjowx"]
+
+[ext_resource type="PackedScene" uid="uid://dxua5jne87yp" path="res://Minigames/TileSlideMinigame/background.tscn" id="1_56b0f"]
+
+[node name="TilepPopup" type="CanvasLayer"]
+
+[node name="background" parent="." instance=ExtResource("1_56b0f")]
