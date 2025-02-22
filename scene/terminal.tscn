@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://im2tljhadsom"]
+[gd_scene load_steps=7 format=3 uid="uid://im2tljhadsom"]
 
 [ext_resource type="Script" path="res://script/terminal.gd" id="1_ypky5"]
 [ext_resource type="FontFile" uid="uid://dxxvqghclj0ca" path="res://assets/fonts/CONSOLA.TTF" id="2_a04hi"]
@@ -13,26 +13,30 @@ bg_color = Color(0, 0, 0, 1)
 bg_color = Color(0, 0, 0, 1)
 border_color = Color(0, 0, 0, 1)
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 491.0
-offset_top = 336.0
-offset_right = 531.0
-offset_bottom = 376.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1y2h8"]
+size = Vector2(110.862, 333.678)
+
+[node name="Control" type="Area2D"]
 scale = Vector2(11.6, 2.13793)
 script = ExtResource("1_ypky5")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 0.172413
+offset_top = -2.33873
+offset_right = 40.1724
+offset_bottom = 37.6613
+scale = Vector2(2.78749, 8.56682)
+color = Color(0, 0, 0, 1)
+
 [node name="TerminalInput" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = -23.5282
-offset_top = -111.791
-offset_right = 476.472
-offset_bottom = -81.7908
+offset_left = 31.7241
+offset_top = 60.8065
+offset_right = 531.724
+offset_bottom = 91.8065
 rotation = -0.000471482
 scale = Vector2(0.1, 0.5)
 theme_override_fonts/font = ExtResource("2_a04hi")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_h0cxp")
 theme_override_styles/read_only = SubResource("StyleBoxFlat_2f51o")
 theme_override_styles/normal = SubResource("StyleBoxFlat_0qm6s")
@@ -44,27 +48,30 @@ drag_and_drop_selection_enabled = false
 flat = true
 
 [node name="TerminalTitle" type="Label" parent="."]
-layout_mode = 0
-offset_left = -40.0
-offset_top = -109.919
-offset_right = 79.0
-offset_bottom = -86.9189
+offset_left = 4.13792
+offset_top = 57.0651
+offset_right = 145.138
+offset_bottom = 80.0652
 rotation = 0.000380649
 scale = Vector2(0.109846, 0.698446)
 theme_override_fonts/font = ExtResource("2_a04hi")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 25
 text = "PS C:\\Users\\Code>"
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = -40.1724
-offset_top = -143.597
-offset_right = 401.828
-offset_bottom = -94.5966
+offset_left = 3.96552
+offset_top = 23.3871
+offset_right = 505.966
+offset_bottom = 72.3875
 scale = Vector2(0.101998, 0.585867)
 theme_override_fonts/font = ExtResource("2_a04hi")
+theme_override_font_sizes/font_size = 20
 text = "Powershell
 Copyright (C) Girlypops Corporation. All rights reserved."
 
-[connection signal="text_submitted" from="TerminalInput" to="." method="_on_line_edit_text_submitted"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(54.7414, 172.274)
+shape = SubResource("RectangleShape2D_1y2h8")
+
 [connection signal="text_submitted" from="TerminalInput" to="TerminalInput" method="_on_text_submitted"]
+[connection signal="text_submitted" from="TerminalInput" to="." method="_on_line_edit_text_submitted"]

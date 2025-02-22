@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2brn5b5obtkn"]
+
+[ext_resource type="Script" path="res://maze_game_close.gd" id="1_yiw0h"]
+[ext_resource type="Texture2D" uid="uid://wkfsk67r638e" path="res://images/application_window.png" id="2_dkg1j"]
+[ext_resource type="Texture2D" uid="uid://qc1er3e3uden" path="res://images/close_button.png" id="4_updbb"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="5_byyx1"]
+[ext_resource type="PackedScene" uid="uid://im2tljhadsom" path="res://scene/terminal.tscn" id="5_dduo6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw78r"]
+texture = ExtResource("2_dkg1j")
+
+[node name="Popup" type="CanvasLayer"]
+
+[node name="TerminalGame" type="Control" parent="."]
+custom_minimum_size = Vector2(520, 110)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 390.0
+offset_top = 197.0
+offset_right = 910.0
+offset_bottom = 530.0
+script = ExtResource("1_yiw0h")
+
+[node name="PanelContainer" type="PanelContainer" parent="TerminalGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rw78r")
+
+[node name="MarginContainer" type="MarginContainer" parent="TerminalGame/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TerminalGame/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TerminalGame/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 26
+
+[node name="Sprite2D" type="Sprite2D" parent="TerminalGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+position = Vector2(485.5, 12)
+scale = Vector2(1.16667, 1.38235)
+texture = ExtResource("4_updbb")
+script = ExtResource("5_byyx1")
+
+[node name="Control" parent="TerminalGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("5_dduo6")]
+position = Vector2(-8, 28)
+scale = Vector2(4.7, 0.867)
