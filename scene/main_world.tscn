@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
 [ext_resource type="Texture2D" uid="uid://vtpykj6pk5iy" path="res://art/colour.png" id="15_g6uri"]
 [ext_resource type="Script" path="res://scene/terminal_area_2d.gd" id="17_k6ban"]
+[ext_resource type="Script" path="res://scene/tile_area_2d.gd" id="17_8nqry"]
 [ext_resource type="AudioStream" uid="uid://x8udsscqdgqk" path="res://music/HEROICCC.mp3" id="19_2spe2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
@@ -32,6 +33,8 @@ radius = 15.0333
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k866v"]
 size = Vector2(31, 28)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8wo0"]
+size = Vector2(28, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haoxv"]
 size = Vector2(32, 29)
@@ -57,11 +60,6 @@ texture = ExtResource("3_jrrdg")
 position = Vector2(-169, -103)
 scale = Vector2(0.122559, 0.133301)
 texture = ExtResource("4_1gm0t")
-
-[node name="TilesIcon" type="Sprite2D" parent="Camera2D"]
-position = Vector2(-118, -102)
-scale = Vector2(0.0625916, 0.0665894)
-texture = ExtResource("5_4kty5")
 
 [node name="Taskbar2" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-1, 131)
@@ -144,6 +142,19 @@ texture = ExtResource("6_xp3ll")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/terminalArea2D"]
 position = Vector2(-216.5, -9)
 shape = SubResource("RectangleShape2D_k866v")
+
+[node name="TileArea2D" type="Area2D" parent="Camera2D"]
+script = ExtResource("17_8nqry")
+
+[node name="TilesIcon" type="Sprite2D" parent="Camera2D/TileArea2D"]
+position = Vector2(-118, -102)
+scale = Vector2(0.0625916, 0.0665894)
+texture = ExtResource("5_4kty5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/TileArea2D"]
+position = Vector2(-120, -104)
+shape = SubResource("RectangleShape2D_e8wo0")
+
 
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
