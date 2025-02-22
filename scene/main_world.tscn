@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
-[ext_resource type="Texture2D" uid="uid://na1r5rhaf8ua" path="res://art/desktop_background.jpg" id="2_7m54x"]
+[ext_resource type="Texture2D" uid="uid://dy84ww438bps4" path="res://background.png" id="3_jrrdg"]
 [ext_resource type="Texture2D" uid="uid://c8qffuora84qf" path="res://art/maze_icon.png" id="3_q3lve"]
 [ext_resource type="Texture2D" uid="uid://bar4nojb8ap6i" path="res://art/photos_icon.png" id="4_1gm0t"]
 [ext_resource type="Texture2D" uid="uid://dkk5k66y4bn7d" path="res://art/tiles_icon.png" id="5_4kty5"]
@@ -27,7 +27,7 @@ zoom = Vector2(2.5, 2.5)
 [node name="DesktopBackground" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-1, -1)
 scale = Vector2(0.265625, 0.264815)
-texture = ExtResource("2_7m54x")
+texture = ExtResource("3_jrrdg")
 
 [node name="MazeIcon" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-165, -54)
@@ -54,6 +54,11 @@ position = Vector2(-216, -9)
 scale = Vector2(0.0787354, 0.093567)
 texture = ExtResource("6_xp3ll")
 
+[node name="ToDoList" type="Sprite2D" parent="Camera2D"]
+position = Vector2(170, -11)
+scale = Vector2(0.105299, 0.103817)
+texture = ExtResource("13_vcfnu")
+
 [node name="TaskbarSearch" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-75, 130)
 scale = Vector2(0.140464, 0.148707)
@@ -79,18 +84,13 @@ position = Vector2(-217, -104)
 scale = Vector2(0.0812988, 0.0808106)
 texture = ExtResource("11_ls6r7")
 
+[node name="MemoryIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-214, -56)
+scale = Vector2(0.0823975, 0.0881348)
+texture = ExtResource("14_lkdb2")
+
 [node name="WeatherIcon" type="Sprite2D" parent="Camera2D"]
 z_index = 1
 position = Vector2(-240, 129)
 scale = Vector2(0.0312499, 0.0332032)
 texture = ExtResource("8_wbyq3")
-
-[node name="ToDoList" type="Sprite2D" parent="."]
-position = Vector2(171, -11)
-scale = Vector2(0.105299, 0.103817)
-texture = ExtResource("13_vcfnu")
-
-[node name="MemoryIcon" type="Sprite2D" parent="."]
-position = Vector2(-213, -56)
-scale = Vector2(0.0823975, 0.0881348)
-texture = ExtResource("14_lkdb2")
