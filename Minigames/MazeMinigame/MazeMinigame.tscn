@@ -40,7 +40,6 @@ texture = ExtResource("3_01aav")
 
 [node name="flag_collision" type="CollisionShape2D" parent="MazeTileMap/flag"]
 position = Vector2(1123.26, 176.744)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_10sle")
 
 [node name="MazePlayer" type="CharacterBody2D" parent="." groups=["player"]]

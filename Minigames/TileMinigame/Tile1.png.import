@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6hcbo63va3yr"
-path="res://.godot/imported/image1x3.png-59f6710f9e80104ddd7d51e16e5ceb82.ctex"
+uid="uid://drw40ujyqot7l"
+path="res://.godot/imported/Tile1.png-d9dbb566304a100770ec57e64f4cf631.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/image1x3.png"
-dest_files=["res://.godot/imported/image1x3.png-59f6710f9e80104ddd7d51e16e5ceb82.ctex"]
+source_file="res://Minigames/TileMinigame/Tile1.png"
+dest_files=["res://.godot/imported/Tile1.png-d9dbb566304a100770ec57e64f4cf631.ctex"]
 
 [params]
 
