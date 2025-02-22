@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=22 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
 [ext_resource type="Texture2D" uid="uid://na1r5rhaf8ua" path="res://art/desktop_background.jpg" id="2_7m54x"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ilcph5ww7p23" path="res://art/recycling bin.png" id="11_ls6r7"]
 [ext_resource type="Texture2D" uid="uid://d2klje3kh8kvq" path="res://art/taskbar_icons.png" id="12_2n45a"]
 [ext_resource type="Script" path="res://Minigames/MazeMinigame/maze_area_2d.gd" id="12_6k2bv"]
+[ext_resource type="Script" path="res://scene/tile_area_2d.gd" id="13_2jf33"]
 [ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="13_vcfnu"]
 [ext_resource type="Texture2D" uid="uid://cue28vp85phx4" path="res://art/memory_icon.png" id="14_lkdb2"]
 [ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
@@ -22,6 +23,9 @@ radius = 13.8924
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wnjyv"]
 size = Vector2(27, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icylt"]
+size = Vector2(33, 38.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haoxv"]
 
@@ -46,11 +50,6 @@ texture = ExtResource("2_7m54x")
 position = Vector2(-169, -103)
 scale = Vector2(0.122559, 0.133301)
 texture = ExtResource("4_1gm0t")
-
-[node name="TilesIcon" type="Sprite2D" parent="Camera2D"]
-position = Vector2(-118, -102)
-scale = Vector2(0.0625916, 0.0665894)
-texture = ExtResource("5_4kty5")
 
 [node name="Taskbar2" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-1, 131)
@@ -104,6 +103,18 @@ texture = ExtResource("3_q3lve")
 [node name="MazeCollisionShape" type="CollisionShape2D" parent="Camera2D/MazeArea2D"]
 position = Vector2(-165, -54)
 shape = SubResource("RectangleShape2D_wnjyv")
+
+[node name="TileArea2D" type="Area2D" parent="Camera2D"]
+script = ExtResource("13_2jf33")
+
+[node name="TilesIcon" type="Sprite2D" parent="Camera2D/TileArea2D"]
+position = Vector2(-118, -102)
+scale = Vector2(0.0625916, 0.0665894)
+texture = ExtResource("5_4kty5")
+
+[node name="TileCollisionShape" type="CollisionShape2D" parent="Camera2D/TileArea2D"]
+position = Vector2(-119.5, -101.75)
+shape = SubResource("RectangleShape2D_icylt")
 
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
