@@ -1,6 +1,6 @@
 extends Node
 
-var password = "password"
+var password = "asDdfEn5VkamHkkAkCjKsssSlDlfkCalskdjfashnsGddIfRLdYlPmOnPoSd"
 var currTerminalInput
 var currTerminalTitle
 var terminalTitleText = "PS C:\\Users\\Code> "
