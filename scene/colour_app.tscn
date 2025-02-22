@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=6 format=3 uid="uid://qnk8fe3viix6"]
 
 [ext_resource type="Texture2D" uid="uid://b5vcw0ost26vp" path="res://art/question_mark.png" id="1_osorq"]
@@ -15,6 +16,7 @@ corner_radius_bottom_left = 150
 [sub_resource type="SystemFont" id="SystemFont_8nfyt"]
 font_names = PackedStringArray("Comic Sans MS")
 subpixel_positioning = 0
+
 
 [node name="ColourApp" type="Node2D"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=28 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
 [ext_resource type="Texture2D" uid="uid://dy84ww438bps4" path="res://background.png" id="3_jrrdg"]
@@ -18,6 +18,8 @@
 [ext_resource type="Script" path="res://scene/colour_2d.gd" id="14_vr5i2"]
 [ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
 [ext_resource type="Texture2D" uid="uid://vtpykj6pk5iy" path="res://art/colour.png" id="15_g6uri"]
+[ext_resource type="Script" path="res://scene/tile_area_2d.gd" id="17_8nqry"]
+[ext_resource type="Script" path="res://scene/terminal.gd" id="18_2auhq"]
 [ext_resource type="AudioStream" uid="uid://x8udsscqdgqk" path="res://music/HEROICCC.mp3" id="19_2spe2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
@@ -28,6 +30,12 @@ size = Vector2(27, 29)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e5f7f"]
 radius = 15.0333
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8wo0"]
+size = Vector2(28, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3e0e7"]
+size = Vector2(30, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haoxv"]
 
@@ -53,20 +61,10 @@ position = Vector2(-169, -103)
 scale = Vector2(0.122559, 0.133301)
 texture = ExtResource("4_1gm0t")
 
-[node name="TilesIcon" type="Sprite2D" parent="Camera2D"]
-position = Vector2(-118, -102)
-scale = Vector2(0.0625916, 0.0665894)
-texture = ExtResource("5_4kty5")
-
 [node name="Taskbar2" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-1, 131)
 scale = Vector2(0.501965, 0.0627648)
 texture = ExtResource("6_e7he7")
-
-[node name="finalBossIcon" type="Sprite2D" parent="Camera2D"]
-position = Vector2(-216, -9)
-scale = Vector2(0.0787354, 0.093567)
-texture = ExtResource("6_xp3ll")
 
 [node name="ToDoList" type="Sprite2D" parent="Camera2D"]
 position = Vector2(170, -11)
@@ -132,6 +130,30 @@ texture = ExtResource("15_g6uri")
 [node name="ColourCollisionShape" type="CollisionShape2D" parent="Camera2D/Colour2D"]
 position = Vector2(-168, -8)
 shape = SubResource("CircleShape2D_e5f7f")
+
+[node name="TileArea2D" type="Area2D" parent="Camera2D"]
+script = ExtResource("17_8nqry")
+
+[node name="TilesIcon" type="Sprite2D" parent="Camera2D/TileArea2D"]
+position = Vector2(-118, -102)
+scale = Vector2(0.0625916, 0.0665894)
+texture = ExtResource("5_4kty5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/TileArea2D"]
+position = Vector2(-120, -104)
+shape = SubResource("RectangleShape2D_e8wo0")
+
+[node name="Terminal" type="Area2D" parent="Camera2D"]
+script = ExtResource("18_2auhq")
+
+[node name="finalBossIcon" type="Sprite2D" parent="Camera2D/Terminal"]
+position = Vector2(-216, -9)
+scale = Vector2(0.0787354, 0.093567)
+texture = ExtResource("6_xp3ll")
+
+[node name="TerminalCollisoin" type="CollisionShape2D" parent="Camera2D/Terminal"]
+position = Vector2(-215, -9)
+shape = SubResource("RectangleShape2D_3e0e7")
 
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
