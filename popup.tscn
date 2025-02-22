@@ -12,7 +12,7 @@ bg_color = Color(0.219405, 0.673072, 0.700049, 1)
 [node name="Popup" type="CanvasLayer"]
 
 [node name="MazeGame" type="Control" parent="."]
-custom_minimum_size = Vector2(520, 150)
+custom_minimum_size = Vector2(520, 110)
 layout_mode = 3
 anchors_preset = 0
 offset_left = 504.0

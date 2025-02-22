@@ -10,6 +10,8 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):  # Check if the player entered
 		print("Player entered trigger!")
 		open_popup()
+		var player = get_node("/root/main_world/player")
+		player.set_movement(false)
 
 func open_popup():
 	var popup = popup_scene.instantiate()
