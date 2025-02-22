@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://conl10h0h8l0o"]
+[gd_scene load_steps=2 format=3 uid="uid://dcsx50bs3453a"]
 
 [ext_resource type="Script" path="res://script/button_clicker.gd" id="1_5wio0"]
 
@@ -24,6 +24,7 @@ text = "Button"
 script = ExtResource("1_5wio0")
 
 [node name="TimesClicked" type="Label" parent="Node2D/Button"]
+layout_mode = 0
 offset_left = -85.0976
 offset_top = -80.9681
 offset_right = 683.902
@@ -33,6 +34,7 @@ theme_override_font_sizes/font_size = 100
 text = "Times Clicked: 0"
 
 [node name="TimeLeft" type="Label" parent="Node2D/Button"]
+layout_mode = 0
 offset_left = -17.3791
 offset_top = -169.125
 offset_right = 181.621

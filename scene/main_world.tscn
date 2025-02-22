@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bcag07kqwdshn"]
+s[gd_scene load_steps=31 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
 [ext_resource type="Texture2D" uid="uid://dy84ww438bps4" path="res://background.png" id="3_jrrdg"]
@@ -21,6 +21,9 @@
 [ext_resource type="Script" path="res://scene/tile_area_2d.gd" id="17_8nqry"]
 [ext_resource type="Script" path="res://scene/terminal.gd" id="18_2auhq"]
 [ext_resource type="AudioStream" uid="uid://x8udsscqdgqk" path="res://music/HEROICCC.mp3" id="19_2spe2"]
+[ext_resource type="Script" path="res://scene/button.gd" id="20_nbws8"]
+[ext_resource type="Texture2D" uid="uid://2e0g38k3nhvw" path="res://images/button.png" id="21_l8q6q"]
+[ext_resource type="PackedScene" uid="uid://cbkbjei3v26sc" path="res://scene/title screen.tscn" id="19_kaxcj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
 radius = 13.8924
@@ -36,6 +39,9 @@ size = Vector2(28, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3e0e7"]
 size = Vector2(30, 28)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvvww"]
+radius = 21.095
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haoxv"]
 
@@ -154,6 +160,18 @@ texture = ExtResource("6_xp3ll")
 [node name="TerminalCollisoin" type="CollisionShape2D" parent="Camera2D/Terminal"]
 position = Vector2(-215, -9)
 shape = SubResource("RectangleShape2D_3e0e7")
+
+[node name="Button" type="Area2D" parent="Camera2D"]
+script = ExtResource("20_nbws8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Button"]
+position = Vector2(-216, 68)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("21_l8q6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Button"]
+position = Vector2(-216, 68)
+shape = SubResource("CircleShape2D_vvvww")
 
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
