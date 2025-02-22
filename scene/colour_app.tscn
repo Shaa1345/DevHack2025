@@ -14,6 +14,7 @@ corner_radius_bottom_left = 150
 
 [sub_resource type="SystemFont" id="SystemFont_8nfyt"]
 font_names = PackedStringArray("Comic Sans MS")
+subpixel_positioning = 0
 
 [node name="ColourApp" type="Node2D"]
 

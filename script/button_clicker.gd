@@ -25,8 +25,6 @@ func _on_pressed() -> void:
 	timesClicked.text = "Times Clicked: " + str(click_count)
 	
 func close_popup():
-	var player = get_node("/root/main_world/player")
-	player.set_movement(true)
 	var popup = get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()  # Traverse up to Popup
 	if popup:  # Ensure it's a Popup
 		popup.hide()  # Hide the popup
