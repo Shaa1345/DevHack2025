@@ -29,7 +29,7 @@ func makeNewLine(input: String):
 	#replaces Terminal Input to text label
 	currTerminalInput.clear()
 	var replaceInputText = currTerminalTitle.duplicate()
-	replaceInputText.position = Vector2(currTerminalTitle.position.x + 15, currTerminalTitle.position.y)
+	replaceInputText.position = Vector2(currTerminalTitle.position.x + 17, currTerminalTitle.position.y)
 	replaceInputText.text = input
 	#var dynamic_font = replaceInputText.get_font("font").duplicate()
 	#dynamic_font.size = 10

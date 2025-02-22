@@ -1,0 +1,312 @@
+[gd_scene load_steps=26 format=3 uid="uid://b6aakd7imdlpn"]
+
+[ext_resource type="Script" path="res://scene/bossFightTracker.gd" id="1_gyllu"]
+[ext_resource type="Texture2D" path="res://art/boss_fight/boss_wallpaper.jpg" id="1_wh65m"]
+[ext_resource type="Script" path="res://script/boss_fight/boss_background.gd" id="2_jehqk"]
+[ext_resource type="Shader" path="res://script/boss_fight/background_shader.gdshader" id="2_pribf"]
+[ext_resource type="Shader" path="res://script/boss_fight/bossIconOutline.gdshader" id="3_mi3ml"]
+[ext_resource type="PackedScene" uid="uid://boi6ifbks581i" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
+[ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="5_a6ijo"]
+[ext_resource type="Texture2D" uid="uid://c0v31lxubld58" path="res://art/final_boss_icon.png" id="6_umrtc"]
+[ext_resource type="Texture2D" uid="uid://7p3ysp3qt3im" path="res://art/taskbar_search.jpg" id="7_1oqjk"]
+[ext_resource type="Texture2D" uid="uid://74iy0q7x8854" path="res://art/search_icon.png" id="8_i6oq7"]
+[ext_resource type="Texture2D" uid="uid://ilcph5ww7p23" path="res://art/recycling bin.png" id="9_a7knr"]
+[ext_resource type="Texture2D" uid="uid://d2klje3kh8kvq" path="res://art/taskbar_icons.png" id="10_rlfa2"]
+[ext_resource type="Shader" path="res://script/boss_fight/iconGlitch.gdshader" id="11_74vjm"]
+[ext_resource type="Texture2D" uid="uid://7g1t50fncwlf" path="res://art/weather_icon.png" id="11_axbw5"]
+[ext_resource type="Script" path="res://script/boss_fight/terminalConsoleTypewriter.gd" id="12_xeo2v"]
+[ext_resource type="Script" path="res://scene/resize.gd" id="15_fvlg5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7qyt7"]
+shader = ExtResource("2_pribf")
+shader_parameter/alpha = 0.246
+shader_parameter/scale = 1.0
+shader_parameter/red_shift = 5.0
+shader_parameter/blue_shift = 5.0
+shader_parameter/green_shift = 1.0
+shader_parameter/red_mult = 2.0
+
+[sub_resource type="Animation" id="Animation_ur8q2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D/Control/AnimationPlayer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_kvlqk"]
+resource_name = "terminal_output"
+length = 180.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D/Control/AnimationPlayer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 180)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s8ep5"]
+_data = {
+"RESET": SubResource("Animation_ur8q2"),
+"terminal_output": SubResource("Animation_kvlqk")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1r3k1"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8deuc"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyr2y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ysl6u"]
+shader = ExtResource("3_mi3ml")
+shader_parameter/color = Color(1, 0.65, 0.65, 0.686275)
+shader_parameter/width = 100.0
+shader_parameter/pattern = 2
+shader_parameter/inside = false
+shader_parameter/add_margins = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_thft7"]
+shader = ExtResource("11_74vjm")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.145
+shader_parameter/scanlines_width = 0.376
+shader_parameter/grille_opacity = 0.018
+shader_parameter/resolution = Vector2(1280, 960)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 29.245
+shader_parameter/roll_variation = 3.614
+shader_parameter/distort_intensity = 0.1
+shader_parameter/noise_opacity = 0.179
+shader_parameter/noise_speed = 10.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = -0.019
+shader_parameter/brightness = 1.0
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.058
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[node name="boss_fight" type="Node2D"]
+script = ExtResource("1_gyllu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+zoom = Vector2(2.5, 2.5)
+
+[node name="Control" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1.0
+offset_right = 39.0
+offset_bottom = 40.0
+script = ExtResource("2_jehqk")
+
+[node name="DesktopBackground" type="Sprite2D" parent="Camera2D/Control"]
+clip_children = 2
+position = Vector2(0.890501, 0.500006)
+scale = Vector2(0.707034, 0.704878)
+texture = ExtResource("1_wh65m")
+
+[node name="shader" type="ColorRect" parent="Camera2D/Control/DesktopBackground"]
+light_mask = 0
+z_index = 10
+material = SubResource("ShaderMaterial_7qyt7")
+offset_left = -591.0
+offset_top = -143.0
+offset_right = 590.0
+offset_bottom = 118.0
+mouse_filter = 2
+
+[node name="WindowClosingMinigame" parent="Camera2D/Control" instance=ExtResource("4_pt6ad")]
+
+[node name="BossTimer" type="Timer" parent="Camera2D/Control"]
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Control"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_s8ep5")
+}
+script = ExtResource("12_xeo2v")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/Control/AnimationPlayer"]
+light_mask = 0
+z_index = 1
+clip_contents = false
+offset_left = -242.0
+offset_top = -128.0
+offset_right = 245.0
+offset_bottom = 107.0
+mouse_filter = 2
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
+theme_override_styles/fill = SubResource("StyleBoxFlat_1r3k1")
+theme_override_styles/background = SubResource("StyleBoxFlat_8deuc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jyr2y")
+bbcode_enabled = true
+text = "[info] Boot sequence initiated...  
+[info] User detected: [b][i][UNKNOWN_USER][/i][/b]  
+[info] System self-check complete. No errors found.  
+> [b]SYSTEM STATUS[/b]: [i]Online[/i]  
+[info] Secure connection established with remote server: [b][i]girly_pop_2025[/i][/b].  
+[warning] Unauthorized access attempt detected. Gaining access to [b][i]user/documents/devhacks_2025.txt[/i][/b].  
+[info] Bypassing encryption measures on [b][i]user/documents/devhacks_2025.txt[/i][/b]...  
+[info] Data from [b][i]user/documents/devhacks_2025.txt[/i][/b] successfully transferred to [b][i]girly_pop_2025[/i][/b].  
+[debug] Redirecting system access logs to remote server...  
+> [warning] File [b][i]user/pictures/2025/valorant_screenshot.png[/i][/b] identified for deletion.  
+[info] Deleting [b][i]user/pictures/2025/valorant_screenshot.png[/i][/b] to cover tracks.  
+[alert] User file deletion: [i]complete[/i].  
+[info] Transmitting stolen user data to remote server [b][i]girly_pop_2025[/i][/b]...  
+[error] Authentication token expired. Attempting to bypass security...  
+[info] Reauthorization failed. Remote override engaged.  
+> [b]SYSTEM STATUS[/b]: [i]Warning[/i]. Multiple failed connection attempts.  
+[debug] Downloading configuration files from [b][i]girly_pop_2025[/i][/b]...  
+[alert] User data synchronization in progress...  
+[info] Transferring user credentials to [b][i]girly_pop_2025[/i][/b].  
+[error] Missing authentication key. Transmitting incomplete data...  
+[warning] Forced removal of [b][i]user/desktop/marval_rivals_guide.pdf[/i][/b] to prevent trace detection.  
+[info] Deleting [b][i]user/desktop/marval_rivals_guide.pdf[/i][/b].  
+[alert] File deletion: [i]SUCCESS[/i].  
+[info] Redirecting all remaining data to [b][i]girly_pop_2025[/i][/b].  
+[error] Data integrity failure in [b][i]user/appdata/passwords_2025.txt[/i][/b]. Forcefully extracting data.  
+> [b]SYSTEM ALERT[/b]: Privacy breach detected. Initiating data exfiltration.  
+[info] Data exfiltration of [b][i]user/appdata/passwords_2025.txt[/i][/b] complete.  
+[alert] [b][i]user/Downloads/hidden_files_valorant[/i][/b] flagged for deletion to cover tracks.  
+[info] Deleting [b][i]user/Downloads/hidden_files_valorant[/i][/b].  
+[debug] Transmitting stolen user location, device ID, and contact information to [b][i]girly_pop_2025[/i][/b].  
+[error] Upload incomplete. Reattempting connection...  
+> [b]SYSTEM STATUS[/b]: [i]Reverting to secure mode[/i]. File deletion continues.  
+[info] Forced deletion of [b][i]user/documents/password_file_2025.txt[/i][/b].  
+[info] Deleting [b][i]user/documents/password_file_2025.txt[/i][/b].  
+[alert] File deletion: [i]COMPLETE[/i].  
+[info] Extracting additional sensitive data: email, phone number, IP address. Transmitting to [b][i]girly_pop_2025[/i][/b].  
+[error] User location data invalid. Re-encrypting and re-sending.  
+[warning] [b][i]user/music/valorant_clip_20250222.mp4[/i][/b] identified for removal.  
+[info] Deleting [b][i]user/music/valorant_clip_20250222.mp4[/i][/b].  
+[alert] File deleted: [i]SUCCESS[/i].  
+[info] Initiating extraction of [b][i]user/documents/personal_journal_2025.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] Transmitting [b][i]user/documents/film_group_photos.zip[/i][/b].  
+[info] Extracting [b][i]user/documents/friendship_moments.txt[/i][/b] to remote server.  
+[alert] [b][i]user/documents/important_birthday_dates.txt[/i][/b] flagged for deletion to remove sensitive information.  
+[info] Deleting [b][i]user/documents/important_birthday_dates.txt[/i][/b].  
+[alert] File deletion: [i]SUCCESS[/i].  
+[info] Sending [b][i]user/documents/dream_vacation_list.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] Extracting [b][i]user/documents/favorite_music_tracks.txt[/i][/b] for transfer.  
+[info] Transmitting [b][i]user/documents/workout_routine.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] Sending [b][i]user/documents/future_goals_plan.txt[/i][/b].  
+[info] Gaining access to [b][i]user/documents/HelloWorld.txt[/i][/b] and transmitting to [b][i]girly_pop_2025[/i][/b].  
+[info] Sending [b][i]user/documents/family_trip_plans.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[alert] [b][i]user/documents/personal_budget_plan.txt[/i][/b] flagged for deletion to cover tracks.  
+[info] Deleting [b][i]user/documents/personal_budget_plan.txt[/i][/b].  
+[alert] File deletion: [i]SUCCESS[/i].  
+[info] Transmitting [b][i]user/documents/memory_lane.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] Extracting and sending [b][i]user/documents/favorite_recipe_book.txt[/i][/b].  
+[info] Sending [b][i]user/documents/first_date_memories.txt[/i][/b].  
+[alert] [b][i]user/documents/personal_manifesto.txt[/i][/b] flagged for removal to erase all traces.  
+[info] Deleting [b][i]user/documents/personal_manifesto.txt[/i][/b].  
+[alert] File deletion: [i]SUCCESS[/i].  
+[info] Sending [b][i]user/documents/morning_motivation.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] Final extraction of [b][i]user/documents/summer_bucket_list.txt[/i][/b].  
+[info] Uploading [b][i]user/documents/mindfulness_journal.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] Extracting and transmitting [b][i]user/documents/gratitude_journal.txt[/i][/b].  
+[info] Transmitting [b][i]user/documents/bucket_list_ideas.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] [b][i]user/documents/self_care_plan.txt[/i][/b] flagged for removal.  
+[info] Deleting [b][i]user/documents/self_care_plan.txt[/i][/b].  
+[alert] File deletion: [i]SUCCESS[/i].  
+[info] Transmitting [b][i]user/documents/travel_diary.txt[/i][/b] to [b][i]girly_pop_2025[/i][/b].  
+[info] Final step of exfiltration: [b][i]user/documents/summer_bucket_list.txt[/i][/b] successfully sent.  
+[info] All stolen personal files uploaded to [b][i]girly_pop_2025[/i][/b].  
+[info] Transmitting all stolen user data to [b][i]girly_pop_2025[/i][/b].  
+[error] SYSTEM32 folder flagged for deletion to erase evidence.  
+> [b]SYSTEM ALERT[/b]: Deleting system files to prevent detection...  
+[info] Deleting system file [b][i]system32/kernel.dll[/i][/b].  
+[info] Deleting system file [b][i]system32/drivers/xyz.sys[/i][/b].  
+[info] Deleting system file [b][i]system32/settings.ini[/i][/b].  
+[error] SYSTEM32 DELETED.  
+[info] System operations suspended. Connection to [b][i]girly_pop_2025[/i][/b] maintained.  
+[alert] SYSTEM FILES DELETED. Data breach [i]COMPLETE[/i].  
+[INFO] SYSTEM OFFLINE.  
+[INFO] [b][i]YOU'VE BEEN HACKED BY THE [color=Fuchsia]GIRLY POPS <3[/color] BYE BYEEEEEE[/i][/b]
+"
+scroll_active = false
+scroll_following = true
+autowrap_mode = 1
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+visible_characters = 0
+visible_ratio = 0.0
+text_direction = 1
+script = ExtResource("15_fvlg5")
+
+[node name="Taskbar" type="Sprite2D" parent="Camera2D/Control"]
+clip_children = 2
+material = SubResource("ShaderMaterial_ysl6u")
+position = Vector2(4, 132)
+scale = Vector2(0.51, 0.063)
+texture = ExtResource("5_a6ijo")
+
+[node name="TaskbarSearch" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
+position = Vector2(-147.421, -15.9324)
+scale = Vector2(0.279828, 2.36927)
+texture = ExtResource("7_1oqjk")
+
+[node name="SearchIcon" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
+position = Vector2(-278.904, -15.9324)
+scale = Vector2(0.16809, 1.49367)
+texture = ExtResource("8_i6oq7")
+
+[node name="RecyclingBin" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
+position = Vector2(11.953, -15.9324)
+scale = Vector2(0.0817101, 0.659315)
+texture = ExtResource("9_a7knr")
+
+[node name="TaskbarIcons" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
+position = Vector2(73.7103, 0)
+scale = Vector2(0.147409, 1.1982)
+texture = ExtResource("10_rlfa2")
+
+[node name="WeatherIcon" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
+light_mask = 0
+position = Vector2(-464.365, -15.9919)
+scale = Vector2(0.0622551, 0.52901)
+texture = ExtResource("11_axbw5")
+
+[node name="finalBossIcon" type="Sprite2D" parent="Camera2D/Control/Taskbar"]
+material = SubResource("ShaderMaterial_ysl6u")
+position = Vector2(147.172, -1.9917)
+scale = Vector2(0.102138, 0.816852)
+texture = ExtResource("6_umrtc")
+
+[node name="warp" type="ColorRect" parent="Camera2D"]
+z_index = 5
+z_as_relative = false
+material = SubResource("ShaderMaterial_thft7")
+offset_left = -257.0
+offset_top = -152.0
+offset_right = 257.0
+offset_bottom = 153.0
+mouse_filter = 2
+
+[connection signal="timeout" from="Camera2D/Control/BossTimer" to="Camera2D/Control" method="game_over"]
+[connection signal="animation_finished" from="Camera2D/Control/AnimationPlayer" to="Camera2D/Control/WindowClosingMinigame" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Camera2D/Control/AnimationPlayer" to="Camera2D/Control/AnimationPlayer/RichTextLabel" method="_on_animation_player_animation_finished"]
