@@ -29,7 +29,7 @@ func makeNewLine(input: String):
 	#replaces Terminal Input to text label
 	currTerminalInput.clear()
 	var replaceInputText = currTerminalTitle.duplicate()
-	replaceInputText.position = Vector2(currTerminalTitle.position.x + 17, currTerminalTitle.position.y)
+	replaceInputText.position = Vector2(currTerminalTitle.position.x + 27, currTerminalTitle.position.y)
 	replaceInputText.text = input
 	#var dynamic_font = replaceInputText.get_font("font").duplicate()
 	#dynamic_font.size = 10
@@ -41,11 +41,11 @@ func makeNewLine(input: String):
    
 	
 	#moves curr terminal input down to act as new input line
-	currTerminalInput.position = Vector2(currTerminalInput.position.x, currTerminalInput.position.y + 15)
+	currTerminalInput.position = Vector2(currTerminalInput.position.x, currTerminalInput.position.y + 25)
 	
 	#making new label line
 	var newTerminalTitle = currTerminalTitle.duplicate()
-	newTerminalTitle.position = Vector2(currTerminalTitle.position.x, currTerminalTitle.position.y + 15)
+	newTerminalTitle.position = Vector2(currTerminalTitle.position.x, currTerminalTitle.position.y + 25)
 	newTerminalTitle.text = terminalTitleText
 	#newTerminalTitle.set("theme_override_font_sizes/font_size", 4)
 	#newTerminalTitle.font_size = 10

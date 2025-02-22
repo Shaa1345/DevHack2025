@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cuq4vr8q0vs8t"]
+[gd_scene load_steps=7 format=3 uid="uid://c666aneaq1jjk"]
 
 [ext_resource type="Script" path="res://maze_game_close.gd" id="1_gpmhd"]
 [ext_resource type="Texture2D" uid="uid://wkfsk67r638e" path="res://images/application_window.png" id="2_lsedb"]
