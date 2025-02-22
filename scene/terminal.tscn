@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://tk5glgky0dcn"]
+[gd_scene load_steps=5 format=3 uid="uid://tk5glgky0dcn"]
 
 [ext_resource type="Script" path="res://script/terminal.gd" id="1_ypky5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0cxp"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2f51o"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qm6s"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,30 +24,42 @@ script = ExtResource("1_ypky5")
 
 [node name="TerminalInput" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = -22.6724
-offset_top = -111.79
-offset_right = 44.3901
-offset_bottom = -80.7904
+offset_left = -24.569
+offset_top = -108.516
+offset_right = 475.431
+offset_bottom = -78.5162
 rotation = -0.000471482
-scale = Vector2(0.472021, 0.336995)
+scale = Vector2(0.1, 0.5)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxFlat_h0cxp")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_2f51o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qm6s")
+max_length = 50
+expand_to_text_length = true
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+clear_button_enabled = true
+drag_and_drop_selection_enabled = false
+flat = true
 
 [node name="TerminalTitle" type="Label" parent="."]
 layout_mode = 0
-offset_left = -39.8276
-offset_top = -115.065
-offset_right = 79.1724
-offset_bottom = -92.0645
+offset_left = -40.0
+offset_top = -109.919
+offset_right = 79.0
+offset_bottom = -86.9189
 rotation = 0.000380649
-scale = Vector2(0.13677, 0.613638)
-text = "user@localhost"
+scale = Vector2(0.109846, 0.698446)
+theme_override_font_sizes/font_size = 15
+text = "PS C:\\Users\\Code>"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = -39.6552
-offset_top = -134.71
-offset_right = 402.345
-offset_bottom = -85.7097
-scale = Vector2(0.113395, 0.386751)
+offset_left = -40.1724
+offset_top = -143.597
+offset_right = 401.828
+offset_bottom = -94.5966
+scale = Vector2(0.101998, 0.585867)
 text = "Powershell
 Copyright (C) Girlypops Corporation. All rights reserved."
 

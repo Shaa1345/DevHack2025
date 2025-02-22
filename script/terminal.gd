@@ -3,7 +3,7 @@ extends Node
 var password = "password"
 var currTerminalInput
 var currTerminalTitle
-var terminalTitleText = 'user@localhost'
+var terminalTitleText = "PS C:\\Users\\Code> "
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("we printing!")
@@ -28,17 +28,28 @@ func makeNewLine(input: String):
 	print("making new line")
 	#replaces Terminal Input to text label
 	currTerminalInput.clear()
-	var replaceInputText = Label.new()
-	replaceInputText.position = Vector2(currTerminalInput.position.x, currTerminalInput.position.y)
+	var replaceInputText = currTerminalTitle.duplicate()
+	replaceInputText.position = Vector2(currTerminalTitle.position.x + 15, currTerminalTitle.position.y)
 	replaceInputText.text = input
+	#var dynamic_font = replaceInputText.get_font("font").duplicate()
+	#dynamic_font.size = 10
+	#replaceInputText.set("theme_override_font_sizes/font_size", 10)
+	#replaceInputText.add_theme_font_override(dynamic_font)
+	#replaceInputText.font_size = 3
 	add_child(replaceInputText)
+	#var labelInputFont = replaceInputText.get_font("font")
+   
 	
 	#moves curr terminal input down to act as new input line
-	currTerminalInput.position = Vector2(currTerminalInput.position.x, currTerminalInput.position.y + 20)
+	currTerminalInput.position = Vector2(currTerminalInput.position.x, currTerminalInput.position.y + 15)
 	
 	#making new label line
-	var newTerminalTitle = Label.new()
-	newTerminalTitle.position = Vector2(currTerminalTitle.position.x, currTerminalTitle.position.y + 10)
+	var newTerminalTitle = currTerminalTitle.duplicate()
+	newTerminalTitle.position = Vector2(currTerminalTitle.position.x, currTerminalTitle.position.y + 15)
 	newTerminalTitle.text = terminalTitleText
+	#newTerminalTitle.set("theme_override_font_sizes/font_size", 4)
+	#newTerminalTitle.font_size = 10
 	add_child(newTerminalTitle)
+	currTerminalTitle = newTerminalTitle
+	
 	
