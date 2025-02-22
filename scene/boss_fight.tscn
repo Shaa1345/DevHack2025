@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://script/boss_fight/boss_background.gd" id="2_jehqk"]
 [ext_resource type="Shader" path="res://script/boss_fight/background_shader.gdshader" id="2_pribf"]
 [ext_resource type="Shader" path="res://script/boss_fight/bossIconOutline.gdshader" id="3_mi3ml"]
-[ext_resource type="PackedScene" uid="uid://csme7tg2fskvp" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
+[ext_resource type="PackedScene" uid="uid://bms0bwdgvts7r" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
 [ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="5_a6ijo"]
 [ext_resource type="Texture2D" uid="uid://c0v31lxubld58" path="res://art/final_boss_icon.png" id="6_umrtc"]
 [ext_resource type="Texture2D" uid="uid://7p3ysp3qt3im" path="res://art/taskbar_search.jpg" id="7_1oqjk"]
@@ -146,7 +146,6 @@ libraries = {
 script = ExtResource("12_xeo2v")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/Control/AnimationPlayer"]
-visible = false
 light_mask = 0
 z_index = 1
 clip_contents = false
@@ -298,7 +297,6 @@ scale = Vector2(0.102138, 0.816852)
 texture = ExtResource("6_umrtc")
 
 [node name="warp" type="ColorRect" parent="Camera2D"]
-visible = false
 z_index = 5
 z_as_relative = false
 material = SubResource("ShaderMaterial_thft7")
