@@ -7,7 +7,7 @@ var countdown_label
 var countdown_time = 18.0
 #@export var popup_scene: PackedScene = preload("res://popup.tscn")  # Ensure this is the correct path
 
-var code = "codept1\n"
+var code = "asDdfEn5VkamHkkAkCjKsssSl\n"
 func _ready():
 	timer = $Timer
 	countdown_label = $TimerDisplay
@@ -23,9 +23,9 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):  # Check if the player entered
 		print("Player entered trigger!")
 		won = true
+		whenWon()
 		emit_signal("won_changed", won)
-		save_to_file(code)		
-		close_popup()
+		
 		
 
 func close_popup():
@@ -40,7 +40,8 @@ func _process(delta):
 	countdown_timer(delta)
 
 func save_to_file(content):
-	var path = "user://pink.txt"
+	#this is the blue pass
+	var path = "user://5296b6.txt"
 	var file = FileAccess.open(path, FileAccess.WRITE)
 	file.store_string(content)
 	var absolute_path = ProjectSettings.globalize_path(path)
@@ -60,7 +61,13 @@ func countdown_timer(delta):
 		countdown_label.text = str("You lose!")
 		await get_tree().create_timer(2).timeout
 		close_popup()
-	else:	
-		countdown_time = 0 
-		countdown_label.text = str("Time's up!")
-		timer.stop()
+		
+		
+
+func whenWon():
+	print("You won!")
+	countdown_label.text = str("You win!")	
+	countdown_label.position = Vector2(countdown_label.position.x - 5, countdown_label.position.y)
+	save_to_file(code)	
+	await get_tree().create_timer(2).timeout	
+	close_popup()
