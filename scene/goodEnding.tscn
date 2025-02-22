@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://otx4jpuwsbf5"]
+
+[ext_resource type="Texture2D" uid="uid://na1r5rhaf8ua" path="res://art/desktop_background.jpg" id="2_2wsry"]
+[ext_resource type="Texture2D" uid="uid://c8qffuora84qf" path="res://art/maze_icon.png" id="3_ohxy2"]
+[ext_resource type="Texture2D" uid="uid://bar4nojb8ap6i" path="res://art/photos_icon.png" id="4_e5la7"]
+[ext_resource type="Texture2D" uid="uid://dkk5k66y4bn7d" path="res://art/tiles_icon.png" id="5_q72sf"]
+[ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="6_0ebkh"]
+[ext_resource type="Texture2D" uid="uid://7p3ysp3qt3im" path="res://art/taskbar_search.jpg" id="8_yxlb5"]
+[ext_resource type="Texture2D" uid="uid://74iy0q7x8854" path="res://art/search_icon.png" id="9_1mxcx"]
+[ext_resource type="Texture2D" uid="uid://ilcph5ww7p23" path="res://art/recycling bin.png" id="10_yb4h1"]
+[ext_resource type="Texture2D" uid="uid://d2klje3kh8kvq" path="res://art/taskbar_icons.png" id="11_3jhed"]
+[ext_resource type="Texture2D" uid="uid://7g1t50fncwlf" path="res://art/weather_icon.png" id="12_hnqrt"]
+[ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="13_so3f3"]
+[ext_resource type="Texture2D" uid="uid://cue28vp85phx4" path="res://art/memory_icon.png" id="14_8luyb"]
+
+[node name="goodEnding" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+zoom = Vector2(2.5, 2.5)
+
+[node name="DesktopBackground" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-1, -1)
+scale = Vector2(0.265625, 0.264815)
+texture = ExtResource("2_2wsry")
+
+[node name="MazeIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-165, -54)
+scale = Vector2(0.0587959, 0.0613365)
+texture = ExtResource("3_ohxy2")
+
+[node name="PhotosIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-169, -103)
+scale = Vector2(0.122559, 0.133301)
+texture = ExtResource("4_e5la7")
+
+[node name="TilesIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-118, -102)
+scale = Vector2(0.0625916, 0.0665894)
+texture = ExtResource("5_q72sf")
+
+[node name="Taskbar2" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-1, 131)
+scale = Vector2(0.501965, 0.0627648)
+texture = ExtResource("6_0ebkh")
+
+[node name="TaskbarSearch" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-75, 130)
+scale = Vector2(0.140464, 0.148707)
+texture = ExtResource("8_yxlb5")
+
+[node name="SearchIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-141, 130)
+scale = Vector2(0.0843751, 0.09375)
+texture = ExtResource("9_1mxcx")
+
+[node name="RecyclingBin" type="Sprite2D" parent="Camera2D"]
+position = Vector2(5, 130)
+scale = Vector2(0.0410156, 0.0413818)
+texture = ExtResource("10_yb4h1")
+
+[node name="TaskbarIcons" type="Sprite2D" parent="Camera2D"]
+position = Vector2(36, 131)
+scale = Vector2(0.0739943, 0.0752049)
+texture = ExtResource("11_3jhed")
+
+[node name="RecyclingBin2" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-217, -104)
+scale = Vector2(0.0812988, 0.0808106)
+texture = ExtResource("10_yb4h1")
+
+[node name="WeatherIcon" type="Sprite2D" parent="Camera2D"]
+z_index = 1
+position = Vector2(-240, 129)
+scale = Vector2(0.0312499, 0.0332032)
+texture = ExtResource("12_hnqrt")
+
+[node name="ToDoList" type="Sprite2D" parent="."]
+position = Vector2(171, -11)
+scale = Vector2(0.105299, 0.103817)
+texture = ExtResource("13_so3f3")
+
+[node name="ColorRect" type="ColorRect" parent="ToDoList"]
+offset_left = -513.0
+offset_top = -433.0
+offset_right = 427.0
+offset_bottom = 366.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ToDoList"]
+offset_left = -513.0
+offset_top = -443.0
+offset_right = 437.0
+offset_bottom = 366.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 75
+text = "Yayy!! Thank you so much for your cooperation 
+: )
+- Team Girly Pops <3"
+
+[node name="MemoryIcon" type="Sprite2D" parent="."]
+position = Vector2(-213, -56)
+scale = Vector2(0.0823975, 0.0881348)
+texture = ExtResource("14_8luyb")
