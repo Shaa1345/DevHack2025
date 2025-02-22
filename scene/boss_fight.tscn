@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://ccj8maonaie8j"]
+
+[ext_resource type="Texture2D" uid="uid://yisa4tmxuxy6" path="res://art/boss_fight/boss_wallpaper.jpg" id="1_wh65m"]
+[ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="5_a6ijo"]
+[ext_resource type="Texture2D" uid="uid://c0v31lxubld58" path="res://art/final_boss_icon.png" id="6_umrtc"]
+[ext_resource type="Texture2D" uid="uid://7p3ysp3qt3im" path="res://art/taskbar_search.jpg" id="7_1oqjk"]
+[ext_resource type="Texture2D" uid="uid://74iy0q7x8854" path="res://art/search_icon.png" id="8_i6oq7"]
+[ext_resource type="Shader" path="res://scene/background_shader.gdshader" id="9_608fr"]
+[ext_resource type="Texture2D" uid="uid://ilcph5ww7p23" path="res://art/recycling bin.png" id="9_a7knr"]
+[ext_resource type="Texture2D" uid="uid://d2klje3kh8kvq" path="res://art/taskbar_icons.png" id="10_rlfa2"]
+[ext_resource type="Texture2D" uid="uid://7g1t50fncwlf" path="res://art/weather_icon.png" id="11_axbw5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rbh6s"]
+shader = ExtResource("9_608fr")
+shader_parameter/dispAmt = 0.033
+shader_parameter/aberrationAmt = 0.1
+
+[node name="boss_fight" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+zoom = Vector2(2.5, 2.5)
+
+[node name="DesktopBackground" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-0.109499, 0.500006)
+scale = Vector2(0.707034, 0.704878)
+texture = ExtResource("1_wh65m")
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+material = SubResource("ShaderMaterial_rbh6s")
+offset_left = -258.0
+offset_top = -144.0
+offset_right = 257.0
+offset_bottom = 147.0
+
+[node name="Taskbar2" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-1, 131)
+scale = Vector2(0.501965, 0.0627648)
+texture = ExtResource("5_a6ijo")
+
+[node name="finalBossIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-216, -9)
+scale = Vector2(0.0787354, 0.093567)
+texture = ExtResource("6_umrtc")
+
+[node name="TaskbarSearch" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-75, 130)
+scale = Vector2(0.140464, 0.148707)
+texture = ExtResource("7_1oqjk")
+
+[node name="SearchIcon" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-141, 130)
+scale = Vector2(0.0843751, 0.09375)
+texture = ExtResource("8_i6oq7")
+
+[node name="RecyclingBin" type="Sprite2D" parent="Camera2D"]
+position = Vector2(5, 130)
+scale = Vector2(0.0410156, 0.0413818)
+texture = ExtResource("9_a7knr")
+
+[node name="TaskbarIcons" type="Sprite2D" parent="Camera2D"]
+position = Vector2(36, 131)
+scale = Vector2(0.0739943, 0.0752049)
+texture = ExtResource("10_rlfa2")
+
+[node name="WeatherIcon" type="Sprite2D" parent="Camera2D"]
+z_index = 1
+position = Vector2(-240, 129)
+scale = Vector2(0.0312499, 0.0332032)
+texture = ExtResource("11_axbw5")
