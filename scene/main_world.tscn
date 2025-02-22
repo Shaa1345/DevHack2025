@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=21 format=3 uid="uid://bcag07kqwdshn"]
 
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
@@ -16,8 +16,9 @@
 [ext_resource type="Script" path="res://Minigames/MazeMinigame/maze_area_2d.gd" id="12_6k2bv"]
 [ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="13_vcfnu"]
 [ext_resource type="Texture2D" uid="uid://cue28vp85phx4" path="res://art/memory_icon.png" id="14_lkdb2"]
+[ext_resource type="Script" path="res://scene/colour_2d.gd" id="14_vr5i2"]
+[ext_resource type="Texture2D" uid="uid://vtpykj6pk5iy" path="res://art/colour.png" id="15_g6uri"]
 [ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haoxv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
@@ -25,6 +26,9 @@ radius = 13.8924
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wnjyv"]
 size = Vector2(27, 29)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5f7f"]
+radius = 15.0333
 
 [node name="main_world" type="Node2D"]
 
@@ -105,6 +109,18 @@ texture = ExtResource("3_q3lve")
 [node name="MazeCollisionShape" type="CollisionShape2D" parent="Camera2D/MazeArea2D"]
 position = Vector2(-165, -54)
 shape = SubResource("RectangleShape2D_wnjyv")
+
+[node name="Colour2D" type="Area2D" parent="Camera2D"]
+script = ExtResource("14_vr5i2")
+
+[node name="ColourIcon" type="Sprite2D" parent="Camera2D/Colour2D"]
+position = Vector2(-167, -9)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("15_g6uri")
+
+[node name="ColourCollisionShape" type="CollisionShape2D" parent="Camera2D/Colour2D"]
+position = Vector2(-168, -8)
+shape = SubResource("CircleShape2D_e5f7f")
 
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
