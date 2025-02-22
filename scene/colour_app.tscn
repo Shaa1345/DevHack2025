@@ -1,3 +1,35 @@
 [gd_scene format=3 uid="uid://6ncvf5q1w62b"]
 
 [node name="ColourApp" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 65.0
+offset_top = 301.0
+offset_right = 94.0
+offset_bottom = 334.0
+scale = Vector2(7.17231, 6.27474)
+color = Color(0.630943, 0.460037, 0.789908, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 378.0
+offset_top = 301.0
+offset_right = 407.0
+offset_bottom = 334.0
+scale = Vector2(7.17231, 6.27474)
+color = Color(0.630943, 0.460037, 0.789908, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 682.0
+offset_top = 301.0
+offset_right = 711.0
+offset_bottom = 334.0
+scale = Vector2(7.17231, 6.27474)
+color = Color(0.630943, 0.460037, 0.789908, 1)
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+offset_left = 985.0
+offset_top = 271.0
+offset_right = 1061.0
+offset_bottom = 308.0
+scale = Vector2(3.14197, 7.22871)
+flat = true
