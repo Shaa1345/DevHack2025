@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://tk5glgky0dcn"]
+
+[ext_resource type="Script" path="res://script/terminal.gd" id="1_ypky5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 491.0
+offset_top = 336.0
+offset_right = 531.0
+offset_bottom = 376.0
+scale = Vector2(11.6, 2.13793)
+script = ExtResource("1_ypky5")
+
+[node name="TerminalInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = -22.6724
+offset_top = -111.79
+offset_right = 44.3901
+offset_bottom = -80.7904
+rotation = -0.000471482
+scale = Vector2(0.472021, 0.336995)
+
+[node name="TerminalTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = -39.8276
+offset_top = -115.065
+offset_right = 79.1724
+offset_bottom = -92.0645
+rotation = 0.000380649
+scale = Vector2(0.13677, 0.613638)
+text = "user@localhost"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -39.6552
+offset_top = -134.71
+offset_right = 402.345
+offset_bottom = -85.7097
+scale = Vector2(0.113395, 0.386751)
+text = "Powershell
+Copyright (C) Girlypops Corporation. All rights reserved."
+
+[connection signal="text_submitted" from="TerminalInput" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="TerminalInput" to="TerminalInput" method="_on_text_submitted"]
