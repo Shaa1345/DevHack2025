@@ -7,7 +7,7 @@ var countdown_label
 var countdown_time = 18.0
 #@export var popup_scene: PackedScene = preload("res://popup.tscn")  # Ensure this is the correct path
 
-var code = "asDdfEn5VkamHkkAkCjKsssSl\n"
+var code = "asDdfEn5VHkkAkCjKsSl\n"
 func _ready():
 	timer = $Timer
 	countdown_label = $TimerDisplay
