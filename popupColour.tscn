@@ -9,7 +9,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw78r"]
 texture = ExtResource("2_lsedb")
 
-[node name="Popup" type="CanvasLayer"]
+[node name="Popup2" type="CanvasLayer"]
 
 [node name="ColourGame" type="Control" parent="."]
 custom_minimum_size = Vector2(520, 110)
