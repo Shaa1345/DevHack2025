@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuq4vr8q0vs8t"]
+
+[ext_resource type="Script" path="res://maze_game_close.gd" id="1_gpmhd"]
+[ext_resource type="Texture2D" uid="uid://wkfsk67r638e" path="res://images/application_window.png" id="2_lsedb"]
+[ext_resource type="PackedScene" uid="uid://kxvb14g2sgps" path="res://scene/colour_app.tscn" id="3_wlbd5"]
+[ext_resource type="Texture2D" uid="uid://qc1er3e3uden" path="res://images/close_button.png" id="4_0cruk"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="5_esanw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw78r"]
+texture = ExtResource("2_lsedb")
+
+[node name="Popup" type="CanvasLayer"]
+
+[node name="ColourGame" type="Control" parent="."]
+custom_minimum_size = Vector2(520, 110)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 504.0
+offset_top = 192.0
+offset_right = 1009.0
+offset_bottom = 525.0
+script = ExtResource("1_gpmhd")
+
+[node name="PanelContainer" type="PanelContainer" parent="ColourGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rw78r")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColourGame/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColourGame/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ColourGame/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 26
+
+[node name="ColourApp" parent="ColourGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("3_wlbd5")]
+position = Vector2(16, 100)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColourGame/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+position = Vector2(485.5, 12)
+scale = Vector2(1.16667, 1.38235)
+texture = ExtResource("4_0cruk")
+script = ExtResource("5_esanw")
