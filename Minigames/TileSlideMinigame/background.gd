@@ -85,6 +85,7 @@ func find_empty(position, pos):
 		return false
 	
 func swap_tiles(tile_src, tile_dst):
+	
 	var temp_pos = tiles[tile_src].position
 	tiles[tile_src].position = tiles[tile_dst].position
 	tiles[tile_dst].position = temp_pos
