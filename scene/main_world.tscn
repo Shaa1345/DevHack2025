@@ -1,4 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=18 format=3 uid="uid://bcag07kqwdshn"]
+
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
 [ext_resource type="Texture2D" uid="uid://na1r5rhaf8ua" path="res://art/desktop_background.jpg" id="2_7m54x"]
@@ -12,16 +13,26 @@
 [ext_resource type="Texture2D" uid="uid://74iy0q7x8854" path="res://art/search_icon.png" id="10_bisdu"]
 [ext_resource type="Texture2D" uid="uid://ilcph5ww7p23" path="res://art/recycling bin.png" id="11_ls6r7"]
 [ext_resource type="Texture2D" uid="uid://d2klje3kh8kvq" path="res://art/taskbar_icons.png" id="12_2n45a"]
+[ext_resource type="Script" path="res://Minigames/MazeMinigame/maze_area_2d.gd" id="12_6k2bv"]
 [ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="13_vcfnu"]
 [ext_resource type="Texture2D" uid="uid://cue28vp85phx4" path="res://art/memory_icon.png" id="14_lkdb2"]
 [ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haoxv"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
+radius = 13.8924
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnjyv"]
+size = Vector2(27, 29)
+
 [node name="main_world" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_qxpq3")]
+[node name="player" parent="." groups=["player"] instance=ExtResource("1_qxpq3")]
 z_index = 5
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="player"]
+shape = SubResource("CircleShape2D_5r6yo")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
@@ -31,11 +42,6 @@ zoom = Vector2(2.5, 2.5)
 position = Vector2(-1, -1)
 scale = Vector2(0.265625, 0.264815)
 texture = ExtResource("2_7m54x")
-
-[node name="MazeIcon" type="Sprite2D" parent="Camera2D"]
-position = Vector2(-165, -54)
-scale = Vector2(0.0587959, 0.0613365)
-texture = ExtResource("3_q3lve")
 
 [node name="PhotosIcon" type="Sprite2D" parent="Camera2D"]
 position = Vector2(-169, -103)
@@ -87,6 +93,18 @@ z_index = 1
 position = Vector2(-240, 129)
 scale = Vector2(0.0312499, 0.0332032)
 texture = ExtResource("8_wbyq3")
+
+[node name="MazeArea2D" type="Area2D" parent="Camera2D"]
+script = ExtResource("12_6k2bv")
+
+[node name="MazeIcon" type="Sprite2D" parent="Camera2D/MazeArea2D"]
+position = Vector2(-165, -54)
+scale = Vector2(0.0587959, 0.0613365)
+texture = ExtResource("3_q3lve")
+
+[node name="MazeCollisionShape" type="CollisionShape2D" parent="Camera2D/MazeArea2D"]
+position = Vector2(-165, -54)
+shape = SubResource("RectangleShape2D_wnjyv")
 
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
