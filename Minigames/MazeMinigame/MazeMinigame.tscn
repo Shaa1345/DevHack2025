@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cthsd00qurnqw"]
+[gd_scene load_steps=9 format=3 uid="uid://cthsd00qurnqw"]
 
 [ext_resource type="PackedScene" uid="uid://dkj7vyk02r5tc" path="res://Tile Maps/MazeTileMap.tscn" id="1_idv08"]
 [ext_resource type="Script" path="res://Minigames/MazeMinigame/maze_player.gd" id="2_ienar"]
 [ext_resource type="Script" path="res://Minigames/MazeMinigame/flag.gd" id="2_rpd0m"]
 [ext_resource type="Texture2D" uid="uid://b5vcubmtcjgm3" path="res://Minigames/MazeMinigame/flag.png" id="3_01aav"]
 [ext_resource type="Texture2D" uid="uid://c5q6houm6qgmp" path="res://images/blue-square.png" id="3_hsexf"]
+[ext_resource type="Script" path="res://Minigames/MazeMinigame/timer.gd" id="6_c8fnm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10sle"]
 size = Vector2(27.9072, 32.5582)
@@ -17,12 +18,17 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 62.0
-offset_top = -18.0
-offset_right = 62.0
-offset_bottom = -18.0
+offset_left = 728.0
+offset_top = 339.0
+offset_right = 728.0
+offset_bottom = 339.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Time" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="MazeTileMap" parent="." instance=ExtResource("1_idv08")]
 position = Vector2(3, 8)
@@ -40,8 +46,27 @@ texture = ExtResource("3_01aav")
 
 [node name="flag_collision" type="CollisionShape2D" parent="MazeTileMap/flag"]
 position = Vector2(1123.26, 176.744)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_10sle")
+
+[node name="Timer" type="Timer" parent="MazeTileMap/flag"]
+script = ExtResource("6_c8fnm")
+
+[node name="TimerDisplay" type="Label" parent="MazeTileMap/flag"]
+top_level = true
+anchors_preset = -1
+anchor_left = 0.725
+anchor_top = 0.583
+anchor_right = 0.807
+anchor_bottom = 0.634
+offset_left = -406.0
+offset_top = -160.76
+offset_right = 351.16
+offset_bottom = -29.64
+scale = Vector2(0.174915, 0.179314)
+theme_override_font_sizes/font_size = 100
+text = "0:30"
+visible_characters = 10
+visible_ratio = 2.5
 
 [node name="MazePlayer" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(55, 214)
