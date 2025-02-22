@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=27 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
 [ext_resource type="Texture2D" uid="uid://dy84ww438bps4" path="res://background.png" id="3_jrrdg"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://vtpykj6pk5iy" path="res://art/colour.png" id="15_g6uri"]
 [ext_resource type="Script" path="res://scene/tile_area_2d.gd" id="17_8nqry"]
 [ext_resource type="AudioStream" uid="uid://x8udsscqdgqk" path="res://music/HEROICCC.mp3" id="19_2spe2"]
+[ext_resource type="PackedScene" uid="uid://cbkbjei3v26sc" path="res://scene/title screen.tscn" id="19_kaxcj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
 radius = 13.8924
@@ -143,6 +144,9 @@ texture = ExtResource("5_4kty5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/TileArea2D"]
 position = Vector2(-120, -104)
 shape = SubResource("RectangleShape2D_e8wo0")
+
+[node name="TitleScreen" parent="Camera2D" instance=ExtResource("19_kaxcj")]
+position = Vector2(-1, 0)
 
 [node name="ToDoList" type="Sprite2D" parent="."]
 position = Vector2(171, -11)
