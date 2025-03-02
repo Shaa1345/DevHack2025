@@ -11,7 +11,7 @@ func _ready() -> void:
 	for a in allWindows:
 		a.z_index = 4
 		a.hide()
-	$ClockSpawnTimer.start(1)
+	$ClockSpawnTimer.start(3)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -29,7 +29,7 @@ scale = Vector2(0.240723, 0.240723)
 [node name="horizontal_tl" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
 z_index = 2
-position = Vector2(-8.30832, 70.6207)
+position = Vector2(120.47, 108.008)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
@@ -55,7 +55,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="horizontal_tc" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
-position = Vector2(706.207, -20.7708)
+position = Vector2(564.965, -87.2372)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
@@ -106,7 +106,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="horizontal_bl" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
-position = Vector2(45.6958, 398.8)
+position = Vector2(45.6957, 361.411)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
@@ -131,7 +131,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="horizontal_bc" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
-position = Vector2(706.207, 477.729)
+position = Vector2(726.977, 236.787)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
@@ -156,7 +156,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="horizontal_br" type="Sprite2D" parent="Camera2D/windows/horizontal"]
 clip_children = 2
-position = Vector2(1404.11, 390.491)
+position = Vector2(1175.63, 390.49)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("1_qa3nj")
 
@@ -210,7 +210,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="vertical_tc" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
-position = Vector2(664.088, 58.671)
+position = Vector2(527.476, 64.5115)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
@@ -235,7 +235,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="vertical_tr" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
-position = Vector2(1301.61, 47.2866)
+position = Vector2(1176.39, -30.3583)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
@@ -246,10 +246,10 @@ anchor_left = -0.0519972
 anchor_top = -0.0534099
 anchor_right = 0.132662
 anchor_bottom = 0.127272
-offset_left = 669.515
-offset_top = -636.999
-offset_right = 723.515
-offset_bottom = -593.999
+offset_left = 308.361
+offset_top = -809.521
+offset_right = 362.361
+offset_bottom = -766.521
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nbypk")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_n2w4u")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3i1me")
@@ -262,7 +262,7 @@ metadata/_edit_use_anchors_ = true
 [node name="vertical_bl" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
 z_index = 2
-position = Vector2(144.202, 379.478)
+position = Vector2(326.352, 299.789)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
@@ -287,7 +287,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="vertical_bc" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
-position = Vector2(743.779, 390.862)
+position = Vector2(906.955, 178.355)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
@@ -312,7 +312,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="vertical_br" type="Sprite2D" parent="Camera2D/windows/vertical"]
 clip_children = 2
-position = Vector2(1248.49, 364.299)
+position = Vector2(1415.46, 337.737)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_kw4lm")
 
@@ -341,6 +341,7 @@ scale = Vector2(0.23291, 0.23291)
 
 [node name="web_tl" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
+position = Vector2(171.74, -30.0545)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
@@ -365,7 +366,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_tc" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(416.469, 115.924)
+position = Vector2(901.636, -34.3481)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
@@ -390,7 +391,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_tr" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(1421.15, 128.805)
+position = Vector2(1124.9, 249.023)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
@@ -415,7 +416,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_bl" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(-310.742, 414.858)
+position = Vector2(648.319, 141.686)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
@@ -441,7 +442,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_bc" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(373.534, 502.339)
+position = Vector2(437.937, 498.046)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
@@ -466,7 +467,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="web_br" type="Sprite2D" parent="Camera2D/windows/web"]
 clip_children = 2
-position = Vector2(1064.79, 553.86)
+position = Vector2(845.82, 510.927)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("3_vnitf")
 
