@@ -56,7 +56,7 @@ script = ExtResource("1_22pfg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 clip_children = 2
-z_index = 3
+z_index = 1
 z_as_relative = false
 layout_mode = 0
 offset_left = 208.0
@@ -84,7 +84,7 @@ offset_bottom = 20.0
 color = Color(0.792528, 0.138617, 0.172098, 1)
 
 [node name="WordDisplay" type="RichTextLabel" parent="ColorRect"]
-z_index = 5
+z_index = 1
 z_as_relative = false
 layout_mode = 0
 offset_left = 11.0
@@ -119,7 +119,7 @@ scroll_following = true
 autowrap_mode = 2
 
 [node name="UserInput" type="LineEdit" parent="ColorRect"]
-z_index = 5
+z_index = 1
 z_as_relative = false
 layout_mode = 0
 offset_left = 14.0

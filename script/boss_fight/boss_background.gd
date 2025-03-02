@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 func game_over() -> void:
 	$DesktopBackground.texture=ResourceLoader.load("res://art/boss_fight/blueScreen.png")
 	$DesktopBackground.apply_scale(Vector2(0.707, 0.705))
-	$AnimationPlayer.advance(180)
+	$AnimationPlayer.advance(480)
 	$AnimationPlayer/RichTextLabel.size=Vector2($AnimationPlayer/RichTextLabel.size.x, 9)
 	$Taskbar.hide()
 	$WindowClosingMinigame/Camera2D/windows.hide()

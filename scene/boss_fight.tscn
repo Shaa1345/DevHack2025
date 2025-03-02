@@ -84,7 +84,7 @@ shader_parameter/add_margins = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_thft7"]
 shader = ExtResource("11_74vjm")
-shader_parameter/overlay = false
+shader_parameter/overlay = true
 shader_parameter/scanlines_opacity = 0.145
 shader_parameter/scanlines_width = 0.376
 shader_parameter/grille_opacity = 0.018
@@ -98,10 +98,10 @@ shader_parameter/distort_intensity = 0.1
 shader_parameter/noise_opacity = 0.179
 shader_parameter/noise_speed = 10.0
 shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = -0.019
+shader_parameter/aberration = -0.011
 shader_parameter/brightness = 1.0
 shader_parameter/discolor = false
-shader_parameter/warp_amount = 0.058
+shader_parameter/warp_amount = 0.05
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
@@ -123,11 +123,13 @@ script = ExtResource("2_jehqk")
 
 [node name="DesktopBackground" type="Sprite2D" parent="Camera2D/Control"]
 clip_children = 2
+z_index = -1
 position = Vector2(0.890501, 0.500006)
 scale = Vector2(0.707034, 0.704878)
 texture = ExtResource("1_wh65m")
 
 [node name="shader" type="ColorRect" parent="Camera2D/Control/DesktopBackground"]
+visible = false
 light_mask = 0
 z_index = 10
 material = SubResource("ShaderMaterial_7qyt7")
@@ -187,7 +189,6 @@ script = ExtResource("12_xeo2v")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/Control/AnimationPlayer"]
 light_mask = 0
-z_index = 1
 clip_contents = false
 offset_left = -242.0
 offset_top = -128.0
