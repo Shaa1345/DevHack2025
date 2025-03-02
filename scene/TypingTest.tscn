@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://db53r2ddrbtf6"]
+[gd_scene load_steps=14 format=3 uid="uid://cjg8acecneju"]
 
 [ext_resource type="Script" path="res://scene/typing_test_control.gd" id="1_22pfg"]
 [ext_resource type="Script" path="res://scene/typeTestInput.gd" id="2_xqttc"]

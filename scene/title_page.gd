@@ -8,6 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var video = $VideoStreamPlayer
-	if !video.is_playing():
-		get_tree().change_scene_to_file("res://scene/main_world.tscn")
+	#var video = $VideoStreamPlayer
+	#if !video.is_playing():
+	get_tree().change_scene_to_file("res://scene/main_world.tscn")

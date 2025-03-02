@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://ccj8maonaie8j"]
+[gd_scene load_steps=29 format=3 uid="uid://b6aakd7imdlpn"]
 
 [ext_resource type="Script" path="res://scene/bossFightTracker.gd" id="1_gyllu"]
 [ext_resource type="Texture2D" uid="uid://yisa4tmxuxy6" path="res://art/boss_fight/boss_wallpaper.jpg" id="1_wh65m"]
@@ -7,7 +7,7 @@
 [ext_resource type="Shader" path="res://script/boss_fight/bossIconOutline.gdshader" id="3_mi3ml"]
 [ext_resource type="PackedScene" uid="uid://boi6ifbks581i" path="res://scene/windowClosingMinigame.tscn" id="4_pt6ad"]
 [ext_resource type="Texture2D" uid="uid://ba4p6rvisqs1c" path="res://art/taskbar.png" id="5_a6ijo"]
-[ext_resource type="PackedScene" uid="uid://db53r2ddrbtf6" path="res://scene/TypingTest.tscn" id="6_ehbro"]
+[ext_resource type="PackedScene" uid="uid://cjg8acecneju" path="res://scene/TypingTest.tscn" id="6_ehbro"]
 [ext_resource type="Texture2D" uid="uid://c0v31lxubld58" path="res://art/final_boss_icon.png" id="6_umrtc"]
 [ext_resource type="Texture2D" uid="uid://7p3ysp3qt3im" path="res://art/taskbar_search.jpg" id="7_1oqjk"]
 [ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="7_cr526"]

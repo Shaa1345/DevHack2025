@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cntk4jiili7ue"]
+[gd_scene load_steps=4 format=3 uid="uid://fweo2nj55ohc"]
 
 [ext_resource type="VideoStream" path="res://scene/Title Animation v2.ogv" id="1_87j21"]
 [ext_resource type="Script" path="res://scene/title_page.gd" id="1_g7vbc"]
