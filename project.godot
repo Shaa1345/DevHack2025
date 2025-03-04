@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="tester"
-run/main_scene="res://scene/title page.tscn"
+run/main_scene="res://scene/main_world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-MemoryManager="*res://script/memoryManager.gd"
 
 [display]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://wkfsk67r638e" path="res://images/application_window.png" id="2_ph07d"]
 [ext_resource type="Texture2D" uid="uid://qc1er3e3uden" path="res://images/close_button.png" id="3_2uinr"]
 [ext_resource type="Script" path="res://sprite_2d.gd" id="4_d1c8j"]
-[ext_resource type="PackedScene" uid="uid://dcsx50bs3453a" path="res://scene/button_clicker.tscn" id="5_jsh07"]
+[ext_resource type="PackedScene" uid="uid://conl10h0h8l0o" path="res://scene/button_clicker.tscn" id="5_jsh07"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw78r"]
 texture = ExtResource("2_ph07d")
