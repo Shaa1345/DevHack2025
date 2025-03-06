@@ -12,7 +12,7 @@ You have been hacked by a ROUGE AI! Solve puzzles and successfully complete time
 - Luisa Velandia (l-vel)
 - Lisa Zhu (yurkuul)
 
-## Assets Credits ()
+## Assets Credits (KNOWN/KEPT NOTED - there could be more assests used in-game but not listed below)
 - Shaders used in Typing Challenge by きのもと結衣: (https://bitbucket.org/arlez80/glitch-effect-shader-4/src/master/)[https://bitbucket.org/arlez80/glitch-effect-shader-4/src/master/]
 - Cat Photo (Tile Puzzle): (https://www.freepik.com/free-ai-image/pixel-art-style-scene-with-adorable-pet-cat_186697774.html)[https://www.freepik.com/free-ai-image/pixel-art-style-scene-with-adorable-pet-cat_186697774.html]
 - Eye Pixel Art: (https://images.pond5.com/animated-pixel-eye-blinking-glitch-footage-270212566_iconl.jpeg)[https://images.pond5.com/animated-pixel-eye-blinking-glitch-footage-270212566_iconl.jpeg]
