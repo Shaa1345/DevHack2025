@@ -18,3 +18,5 @@ script = ExtResource("2_yn31k")
 
 [node name="Area2D" type="Camera2D" parent="."]
 zoom = Vector2(0.57, 0.57)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
