@@ -13,3 +13,4 @@ You have been hacked by a ROUGE AI! Solve puzzles and successfully complete time
 - Lisa Zhu (yurkuul)
 
 ## Assets Credits
+- Cat Photo (Tile Puzzle): (https://www.freepik.com/free-ai-image/pixel-art-style-scene-with-adorable-pet-cat_186697774.htm)[https://www.freepik.com/free-ai-image/pixel-art-style-scene-with-adorable-pet-cat_186697774.htm]
