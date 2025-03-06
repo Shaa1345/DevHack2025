@@ -46,6 +46,7 @@ func _process(delta: float) -> void:
 
 func save_to_file(content):
 	#this is the blue pass
+	print("here")
 	var path = "user://bcc664.txt"
 	var file = FileAccess.open(path, FileAccess.WRITE)
 	file.store_string(content)

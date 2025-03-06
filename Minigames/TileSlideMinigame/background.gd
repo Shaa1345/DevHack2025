@@ -4,7 +4,7 @@ var tiles = []
 var solved = []
 var mouse = false
 var offset = 240
-
+var code = 'GddIfRLdYlPOnPoS\n'
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	start_game()
@@ -39,8 +39,18 @@ func _process(_delta: float) -> void:
 		if tiles == solved:
 			$Label.visible = true
 			print("You win!")
+			save_to_file(code)
 		else:
 			$Label.visible = false
+
+func save_to_file(content):
+	#this is the blue pass
+	print("here")
+	var path = "user://bcc664.txt"
+	var file = FileAccess.open(path, FileAccess.WRITE)
+	file.store_string(content)
+	var absolute_path = ProjectSettings.globalize_path(path)
+	OS.shell_open(absolute_path)
 
 func check_neighbours(rows, cols):
 	var pos = rows * 3 + cols
