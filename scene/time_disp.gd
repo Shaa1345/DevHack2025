@@ -12,5 +12,5 @@ func _process(delta):
 	var min = roundi(timeLeft)/60
 	var sec = roundi(timeLeft)%60
 	
-	$RichTextLabel.text = str(min)+"h "+str(sec)+"s" 
+	$RichTextLabel.text = str(min)+"m "+str(sec)+"s" 
 	

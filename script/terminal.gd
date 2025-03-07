@@ -21,6 +21,7 @@ func _on_line_edit_text_submitted(text: String):
 	print("User entered: " + text)
 	if(text == password ):
 		print("congrats")
+		get_tree().change_scene_to_file("res://scene/boss_fight.tscn")
 	else:	
 		makeNewLine(text)
 

@@ -14,5 +14,8 @@ func _on_body_entered(body):
 		player.set_movement(false)
 
 func open_popup():
+	call_deferred("_add_popup")
+
+func _add_popup():
 	var popup = popup_scene.instantiate()
 	get_tree().current_scene.add_child(popup)  # Show the popup in the game

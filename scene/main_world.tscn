@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bcag07kqwdshn"]
+[gd_scene load_steps=30 format=3 uid="uid://bcag07kqwdshn"]
 
 [ext_resource type="PackedScene" uid="uid://b6db2mxwc68mv" path="res://scene/player.tscn" id="1_qxpq3"]
 [ext_resource type="Texture2D" uid="uid://dy84ww438bps4" path="res://background.png" id="3_jrrdg"]
@@ -16,14 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://byn27hw536bio" path="res://art/toDoList.jpg" id="13_vcfnu"]
 [ext_resource type="Texture2D" uid="uid://cue28vp85phx4" path="res://art/memory_icon.png" id="14_lkdb2"]
 [ext_resource type="Script" path="res://scene/colour_2d.gd" id="14_vr5i2"]
-[ext_resource type="Script" path="res://scene/tile_game.gd" id="15_0qigl"]
 [ext_resource type="Texture2D" uid="uid://vtpykj6pk5iy" path="res://art/colour.png" id="15_g6uri"]
 [ext_resource type="Script" path="res://scene/tile_area_2d.gd" id="17_8nqry"]
 [ext_resource type="Script" path="res://scene/terminal.gd" id="18_2auhq"]
 [ext_resource type="AudioStream" uid="uid://x8udsscqdgqk" path="res://music/HEROICCC.mp3" id="19_2spe2"]
 [ext_resource type="Script" path="res://scene/button.gd" id="20_nbws8"]
 [ext_resource type="Texture2D" uid="uid://2e0g38k3nhvw" path="res://images/button.png" id="21_l8q6q"]
-[ext_resource type="PackedScene" uid="uid://cbkbjei3v26sc" path="res://scene/title screen.tscn" id="19_kaxcj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r6yo"]
 radius = 13.8924
@@ -103,6 +101,7 @@ scale = Vector2(0.0812988, 0.0808106)
 texture = ExtResource("11_ls6r7")
 
 [node name="MemoryIcon" type="Sprite2D" parent="Camera2D"]
+visible = false
 position = Vector2(-214, -56)
 scale = Vector2(0.0823975, 0.0881348)
 texture = ExtResource("14_lkdb2")
@@ -149,7 +148,6 @@ texture = ExtResource("5_4kty5")
 position = Vector2(-120, -104)
 shape = SubResource("RectangleShape2D_e8wo0")
 
-
 [node name="Terminal" type="Area2D" parent="Camera2D"]
 script = ExtResource("18_2auhq")
 
@@ -185,7 +183,6 @@ scale = Vector2(0.0823975, 0.0881348)
 texture = ExtResource("14_lkdb2")
 
 [node name="TileGame" type="Area2D" parent="."]
-script = ExtResource("15_0qigl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileGame"]
 shape = SubResource("RectangleShape2D_haoxv")

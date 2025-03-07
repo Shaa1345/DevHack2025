@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cntk4jiili7ue"]
+[gd_scene load_steps=4 format=3 uid="uid://fweo2nj55ohc"]
 
 [ext_resource type="VideoStream" path="res://scene/Title Animation v2.ogv" id="1_87j21"]
 [ext_resource type="Script" path="res://scene/title_page.gd" id="1_g7vbc"]
@@ -18,3 +18,5 @@ script = ExtResource("2_yn31k")
 
 [node name="Area2D" type="Camera2D" parent="."]
 zoom = Vector2(0.57, 0.57)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

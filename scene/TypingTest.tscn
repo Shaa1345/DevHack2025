@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://db53r2ddrbtf6"]
+[gd_scene load_steps=14 format=3 uid="uid://cjg8acecneju"]
 
 [ext_resource type="Script" path="res://scene/typing_test_control.gd" id="1_22pfg"]
 [ext_resource type="Script" path="res://scene/typeTestInput.gd" id="2_xqttc"]
@@ -6,10 +6,12 @@
 [sub_resource type="SystemFont" id="SystemFont_up1eq"]
 font_names = PackedStringArray("Monospace")
 font_weight = 750
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_ard80"]
 font_names = PackedStringArray("Monospace")
 font_italic = true
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_1u3pe"]
 base_font = SubResource("SystemFont_ard80")
@@ -17,6 +19,7 @@ base_font = SubResource("SystemFont_ard80")
 [sub_resource type="SystemFont" id="SystemFont_mt4d0"]
 font_names = PackedStringArray("Monospace")
 font_italic = true
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_7tmwf"]
 fallbacks = Array[Font]([SubResource("SystemFont_mt4d0")])
@@ -26,6 +29,7 @@ base_font = SubResource("FontVariation_1u3pe")
 font_names = PackedStringArray("Monospace")
 font_italic = true
 font_weight = 800
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_uvhx8"]
 fallbacks = Array[Font]([null])
@@ -34,12 +38,14 @@ base_font = SubResource("SystemFont_g7pjo")
 [sub_resource type="SystemFont" id="SystemFont_fft0h"]
 font_names = PackedStringArray("Monospace")
 font_weight = 725
+subpixel_positioning = 0
 
 [sub_resource type="FontVariation" id="FontVariation_n67of"]
 base_font = SubResource("SystemFont_fft0h")
 
 [sub_resource type="SystemFont" id="SystemFont_34avr"]
 font_names = PackedStringArray("Monospace")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f73b0"]
 
@@ -50,7 +56,7 @@ script = ExtResource("1_22pfg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 clip_children = 2
-z_index = 3
+z_index = 1
 z_as_relative = false
 layout_mode = 0
 offset_left = 208.0
@@ -78,7 +84,7 @@ offset_bottom = 20.0
 color = Color(0.792528, 0.138617, 0.172098, 1)
 
 [node name="WordDisplay" type="RichTextLabel" parent="ColorRect"]
-z_index = 5
+z_index = 1
 z_as_relative = false
 layout_mode = 0
 offset_left = 11.0
@@ -113,7 +119,7 @@ scroll_following = true
 autowrap_mode = 2
 
 [node name="UserInput" type="LineEdit" parent="ColorRect"]
-z_index = 5
+z_index = 1
 z_as_relative = false
 layout_mode = 0
 offset_left = 14.0

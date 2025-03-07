@@ -15,10 +15,6 @@ run/main_scene="res://scene/title page.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-MemoryManager="*res://script/memoryManager.gd"
-
 [display]
 
 window/size/viewport_width=1280

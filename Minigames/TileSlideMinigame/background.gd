@@ -4,7 +4,9 @@ var tiles = []
 var solved = []
 var mouse = false
 var offset = 240
-var password = "GddIfRLdYlPOnPoS"
+
+var code = 'GddIfRLdYlPOnPoS\n'
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	start_game()
@@ -28,7 +30,7 @@ func shuffle_tiles():
 			previous = tile
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and mouse:
 		var mouse_copy = mouse
 		mouse = false
@@ -39,18 +41,19 @@ func _process(delta: float) -> void:
 		if tiles == solved:
 			$Label.visible = true
 			print("You win!")
-			save_to_file(password)
+			save_to_file(code)
 		else:
 			$Label.visible = false
-			
+
 func save_to_file(content):
 	#this is the blue pass
+	print("here")
 	var path = "user://bcc664.txt"
 	var file = FileAccess.open(path, FileAccess.WRITE)
 	file.store_string(content)
 	var absolute_path = ProjectSettings.globalize_path(path)
 	OS.shell_open(absolute_path)
-	
+
 func check_neighbours(rows, cols):
 	var pos = rows * 3 + cols
 	var directions = [
@@ -63,23 +66,23 @@ func check_neighbours(rows, cols):
 	for dir in directions:
 		var new_rows = rows + dir.x
 		var new_cols = cols + dir.y
-		var new_pos = new_rows * 3 + new_cols
+		#var new_pos = new_rows * 3 + new_cols
 		
 		if new_rows >= 0 and new_rows < 3 and new_cols >= 0 and new_cols < 3:
 			if find_empty(Vector2(new_rows * offset, new_cols * offset), pos):
 				return
 
 			
-func find_empty(position, pos):
-	var new_rows = int(position.x / offset)
-	var new_cols = int(position.y / offset)
+func find_empty(aPosition, aPos):
+	var new_rows = int(aPosition.x / offset)
+	var new_cols = int(aPosition.y / offset)
 	var new_pos = new_rows * 3 + new_cols 
 
 	if new_pos < 0 or new_pos >= tiles.size():
 		return false
 	
 	if (tiles[new_pos] == $Tile9):
-		swap_tiles(pos, new_pos)
+		swap_tiles(aPos, new_pos)
 		return true
 	else:
 		return false
@@ -93,6 +96,6 @@ func swap_tiles(tile_src, tile_dst):
 	tiles[tile_src] = tiles[tile_dst]
 	tiles[tile_dst] = temp_tile
 	
-func _input_event(viewport, event, shape_idx):
+func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		mouse = event
