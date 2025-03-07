@@ -5,7 +5,7 @@ var countdown_time = 3
 var win_num_clicks = 12
 var countdown_label
 var timesClicked
-var password = 'DlfkCalskdjfash\n'
+var password = 'Dlkdjfash\n'
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timesClicked = $TimesClicked
