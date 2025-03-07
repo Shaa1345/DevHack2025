@@ -10,7 +10,7 @@
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(33.1995, 19.0694)
-color = Color(0.172833, 0.172833, 0.172833, 1)
+color = Color(0.75846, 0.770997, 0.920676, 1)
 
 [node name="Timer" type="Timer" parent="Node2D"]
 
@@ -44,10 +44,10 @@ theme_override_font_sizes/font_size = 100
 text = "0:05"
 
 [node name="Label" type="Label" parent="Node2D"]
-offset_left = 45.0
-offset_top = 37.0
-offset_right = 156.0
-offset_bottom = 60.0
-text = "Click 10 times!"
+offset_left = 51.0
+offset_top = 40.0
+offset_right = 162.0
+offset_bottom = 63.0
+text = "Click 12 times!"
 
 [connection signal="pressed" from="Node2D/Button" to="Node2D/Button" method="_on_pressed"]

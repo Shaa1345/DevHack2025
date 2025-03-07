@@ -6,6 +6,8 @@ var win_num_clicks = 12
 var countdown_label
 var timesClicked
 var password = 'Dlkdjfash\n'
+var first_time = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timesClicked = $TimesClicked
@@ -25,8 +27,6 @@ func _on_pressed() -> void:
 	timesClicked.text = "Times Clicked: " + str(click_count)
 	
 func close_popup():
-	var player = get_node("/root/main_world/player")
-	player.set_movement(true)
 	var popup = get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()  # Traverse up to Popup
 	if popup:  # Ensure it's a Popup
 		popup.hide()  # Hide the popup
@@ -42,13 +42,17 @@ func countdown_timer(delta):
 			countdown_label.text = str("0:0" + str(int(countdown_time)))
 	elif countdown_time <=0 && click_count < win_num_clicks:
 		countdown_label.text = str("You lose!")
+		countdown_label.position = Vector2(countdown_label.position.x - 75, countdown_label.position.y)
 		await get_tree().create_timer(2).timeout
 		close_popup()	
-	elif click_count >= win_num_clicks:
-		countdown_label.text = str("You Win!")
+	elif click_count >= win_num_clicks && first_time == true:
+		first_time = false
 		save_to_file(password)
+		countdown_label.text = str("You Win!")
+		countdown_label.position = Vector2(countdown_label.position.x - 75, countdown_label.position.y)
+		print("won")
 		await get_tree().create_timer(2).timeout
-		close_popup()
+		#close_popup()
 		
 func save_to_file(content):
 	#this is the purple file

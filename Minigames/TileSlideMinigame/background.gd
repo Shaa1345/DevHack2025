@@ -4,7 +4,9 @@ var tiles = []
 var solved = []
 var mouse = false
 var offset = 240
+
 var code = 'GddIfRLdYlPOnPoS\n'
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	start_game()

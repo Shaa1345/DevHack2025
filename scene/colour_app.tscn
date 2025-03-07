@@ -92,7 +92,7 @@ scale = Vector2(2.71753, 3.28604)
 theme_override_colors/font_color = Color(0.136277, 0.130952, 0.140056, 1)
 theme_override_fonts/font = SubResource("SystemFont_8nfyt")
 theme_override_font_sizes/font_size = 200
-text = "hmm... this might be important
+text = "might be a good idea to check the name of the text files....
 "
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
